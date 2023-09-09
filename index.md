@@ -8,6 +8,7 @@ intro_image_hide_on_mobile: true
 show_call_box: true
 ---
 
+# <br/><br/>
 # Analytiq Hub
 
 * Language models for the Enterprise

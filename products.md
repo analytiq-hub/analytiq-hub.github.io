@@ -1,7 +1,7 @@
 ---
-title: About
+title: Products
 layout: page
-description: About
+description: Products
 bodyClass: page-about
 ---
 

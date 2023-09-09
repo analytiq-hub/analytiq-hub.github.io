@@ -10,4 +10,7 @@ show_call_box: true
 
 # Analytiq Hub
 
-Analytiq develops data+AI language models for the enterprise, at scale, on customerv premises and on customer VPC.
+* Data+AI language models for the enterprise
+* Computer vision AI
+* Multi-modal AI
+* At scale, on customer premises and on customer VPC

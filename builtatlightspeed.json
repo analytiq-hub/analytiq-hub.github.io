@@ -1,7 +1,7 @@
 {
-    "originRepo": "https://github.com/zerostaticthemes/jekyll-serif-theme",
-    "title": "Jekyll Serif",
-    "description": "Serif is a multi page business theme for Jekyll.",
+    "originRepo": "https://github.com/analytiq-hub/analytiq-hub.github.io",
+    "title": "Analytiq Hub",
+    "description": "Analytiq Hub is an AI software company.",
     "demoUrl": "https://jekyll-advance.netlify.app",
     "categories": {
       "ssg": ["jekyll"],

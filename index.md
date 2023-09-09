@@ -10,7 +10,7 @@ show_call_box: true
 
 # Analytiq Hub
 
-* Data+AI language models for the enterprise
+* Data+AI language models for the Enterprise
 * Computer vision AI
 * Multi-modal AI
-* At scale, on customer premises and on customer VPC
+* At scale, on customer premises, and on customer VPC

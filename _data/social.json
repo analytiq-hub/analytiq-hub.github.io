@@ -8,5 +8,10 @@
     "name": "Twitter",
     "link": "https://twitter.com/bitdribble",
     "image": "images/social/twitter.svg"
+  },
+  {
+    "name": "LinkedIn",
+    "link": "https://www.linkedin.com/in/andrei-radulescu-banu",
+    "image": "images/social/linkedin.svg"
   }
 ]

@@ -2,7 +2,7 @@
   {
     "name": "Github",
     "link": "https://github.com/analytiq-hub",
-    "image": "images/social/icon8-github.svg"
+    "image": "images/social/icons8-github.svg"
   },
   {
     "name": "Twitter",
@@ -17,6 +17,6 @@
   {
     "name": "Discord",
     "link": "https://discord.com/channels/1152638178306568314/1152638178306568318",
-    "image": "images/social/"
+    "image": "images/social/icons8-discord.svg"
   }
 ]

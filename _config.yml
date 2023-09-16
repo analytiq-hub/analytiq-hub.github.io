@@ -7,8 +7,8 @@ logo:
   mobile_height: "32px"
   mobile_width: "32px"
   desktop: "images/logo/analytiq_hub_long.png"
-  desktop_height: "32px"
-  desktop_width: "120px"
+  desktop_height: "40px"
+  desktop_width: "160px"
 
 home: 
   limit_services: 6

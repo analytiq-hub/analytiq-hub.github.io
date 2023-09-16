@@ -13,5 +13,10 @@
     "name": "LinkedIn",
     "link": "https://www.linkedin.com/in/andrei-radulescu-banu",
     "image": "images/social/linkedin.svg"
+  },
+  {
+    "name": "Discord",
+    "link": "https://discord.com/channels/1152638178306568314/1152638178306568318",
+    "image": "images/social/"
   }
 ]

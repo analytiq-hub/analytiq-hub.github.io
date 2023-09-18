@@ -8,5 +8,4 @@ promoted: true
 weight: 1
 ---
 
-AI, Robotics, Math
-Schedule a meeting: [Calendly](https://calendly.com/bitdribble)
+Schedule a meeting with Andrei on [Calendly](https://calendly.com/bitdribble)

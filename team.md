@@ -9,4 +9,4 @@ intro_image_hide_on_mobile: false
 
 # About Us
 
-Meet the Team.
+Meet the Team:

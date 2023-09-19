@@ -12,6 +12,6 @@ The Analytiq Language App is an open source tool for chatting with Enterprise re
 
 # Bitdribble Microcontainers
 
-Bitdribble microcontainers can be used to containerize and to schedule running application code.
+Bitdribble microcontainers can be used to containerize and to schedule running application code. A typical use case is to schedule periodic network tests, and report back server or service availability.
 * Github: [bitdribble](https://github.com/Bitdribble/bitdribble)
 * Docs: [bitdribble.readthedocs.io](https://bitdribble.readthedocs.io/en/latest/)

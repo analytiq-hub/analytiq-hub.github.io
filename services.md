@@ -9,4 +9,4 @@ intro_image_hide_on_mobile: true
 
 # Services
 
-Under construction.
+Here is a listing of the services we provide:

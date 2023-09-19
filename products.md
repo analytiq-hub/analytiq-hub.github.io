@@ -7,7 +7,7 @@ bodyClass: page-about
 
 # Analytiq Language App
 
-The Analytiq Language App is an open source tool for chatting with Enterprise records.
+The Analytiq Language App is an open source tool for chatting with Enterprise records. One application we are focusing on is - using the App as a chat interface for Lexington, Massachusetts public records.
 * Github: [analytiq-language-app](https://github.com/analytiq-hub/analytiq-language-app)
 
 # Bitdribble Microcontainers

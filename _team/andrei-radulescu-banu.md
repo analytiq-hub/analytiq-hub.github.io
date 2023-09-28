@@ -8,4 +8,4 @@ promoted: true
 weight: 1
 ---
 
-Schedule a meeting with Andrei on [Calendly](https://calendly.com/bitdribble)
+Schedule a meeting with Andrei on [Calendly](https://calendly.com/analytiqhub)

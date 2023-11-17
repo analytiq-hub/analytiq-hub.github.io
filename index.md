@@ -11,8 +11,13 @@ show_call_box: true
 # <br/><br/>
 # Analytiq Hub
 
-* Language models for the Enterprise
-* Computer vision AI
-* Multi-modal AI
-* Data Engineering
-* At scale, on customer premises, and on customer VPC
+* AI for Enterprise, with focus on Digital Health
+* AI workflows for administrative and revenue cycle tasks
+* Chat, summarization, retrieval-augmented generation (RAG)
+* RPA and IPA automation
+* Business rules engines
+* DevOps, MLOps
+* Business Intelligence
+* Data deidentification
+* Software stacks include John Snow Labs, Databricks, Snowflake, AWS, Azure, GCP, OpenAI
+* At scale, on customer customer VPC

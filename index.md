@@ -13,10 +13,17 @@ show_call_box: true
 
 * AI for Digital Health
 * AI workflows for administrative and revenue cycle tasks
-* Chat, summarization, retrieval-augmented generation (RAG) for medical applications
-  * On-prem or on deidentified patient data
+* Chat, summarization, RAG
+  * On-prem or deidentified data
 * RPA and IPA automation
 * Business rules engines
 * DevOps, MLOps
 * Business Intelligence
-* Software stacks include: John Snow Labs, Databricks, Snowflake, AWS, Azure, GCP, OpenAI
+* Software stacks include:
+  * John Snow Labs
+  * Databricks
+  * Snowflake
+  * AWS
+  * Azure
+  * GCP
+  * OpenAI

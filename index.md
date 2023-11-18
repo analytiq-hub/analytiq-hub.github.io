@@ -13,7 +13,7 @@ show_call_box: true
 
 * AI for Digital Health
 * AI workflows for administrative and revenue cycle tasks
-* Chat, summarization, RAG
+* Chat, summarization, RAG, LLM fine tuning
   * On-prem or with deidentified data
 * RPA and IPA automation
 * Business rules engines

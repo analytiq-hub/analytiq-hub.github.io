@@ -1,7 +1,7 @@
 ---
 title: "Language Models AI"
 date: 2018-11-18T12:33:46+10:00
-weight: 1
+weight: 2
 ---
 
 We implement on-premise, on-VPC infrastructure based on all major vendors: OpenAI, Databricks, AWS, GCP, Cohere.

@@ -222,13 +222,14 @@ Copy existing layouts as starting points and modify with your specific content s
 
 **DNS Setup:**
 ```
-# For apex domain (company.com)
+# Configure the apex domain of company.ai
 A record: 185.199.108.153
 A record: 185.199.109.153
 A record: 185.199.110.153
 A record: 185.199.111.153
 
-# For www subdomain
+# Also configure www.comany.ai as alias (CNAME) of company.ai.
+# This is required for Github Pages to work.
 CNAME record: your-company.github.io
 ```
 

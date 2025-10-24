@@ -6,7 +6,7 @@ image: /assets/images/how_to_integrate_stripe.png
 categories: [tech, programming, ai, tutorials]
 ---
 
-At [DocRouter.AI](http://docrouter.ai), we build an AI app for processing documents using LLMs. As our user base grew, we needed a reliable way to handle billing. This post explains our Stripe integration, focusing on key design choices. We'll cover why we chose Stripe, how we keep things flexible, pricing decisions, APIs used, and more.
+At [DocRouter.AI](http://docrouter.ai), we build an AI app for processing documents using LLMs. As our user base grew, we needed a reliable way to handle billing for self-serve customers. This post explains our Stripe integration, focusing on key design choices. We'll cover why we chose Stripe, how we keep things flexible, pricing decisions, APIs used, and more.
 
 ## Table of Contents
 
@@ -43,17 +43,19 @@ Users can create an account or organization token, and can control all DocRouter
 
 Having the flexibility to control DocRouter programmatically, either through agentic interfacing, or through APIs is great. 
 
-However, use tracking has to be automated, and the customer needs to be charged a small overhead over what DocRouter.AI itself is charged by the underlying LLM and cloud providers.
+However, use tracking (aka metered billing) has to be automated, and the customer needs to be charged a small percentage above the underlying cost charged by LLM and cloud providers.
 
 Stripe integration is, thus, an essential ingredient in making this kind of programmatic integration possible.
 
 ## Free Tier, Plans, and A-La-Carte Credits
 
-We want users to start free, upgrade to plans, and be able to buy extra credits without friction. Here's how:
+When you are starting, the best pricing is a simple one that your customer understands especially for self-onboaded customers.
+
+For DocRouter, we want users to start free, upgrade to plans, and be able to buy extra credits without friction. Here's how we did it:
 
 ![DocRouter Pricing Plans](/assets/images/docrouter_pricing.png)
 
-New orgs get 100 granted SPUs (no card needed). Additional credits can be purchased. Users can subscribe to an __Individual__ or __Team__ plan, at a discount over the a-la-carte credits price. Or, they can select the __Enterprise__ plan, which is invoiced outside of Stripe.
+New orgs get 100 granted SPUs (no card needed). Additional credits can be purchased. Users can subscribe to an __Individual__ or __Team__ plan, at a discount over the a-la-carte credits price. Or, they can select the __Enterprise__ plan, which is invoiced outside of Stripe where we can charge based on the customer outcomes (aka outcomes-based pricing).
 
 ## Prices for large vs. small customers
 
@@ -69,7 +71,7 @@ The __engineering__ challenge is, on the other hand, in how to create this prici
 
 Updating amounts or utilization thresholds at a later time should not require coding changes in DocRouter.AI. These updates should be possible by merely chaging price configuration in __Stripe__.
 
-Pricing updates, however, does not impact existing customers.
+Pricing updates, however, does not impact existing customers (aka grandfathering).
 
 How does it all work?
 
@@ -336,3 +338,8 @@ For production, swap to live keys (`sk_live_*`). The same code works in both mod
 
 This separation lets us develop and debug payment flows safely without risking real customer data or charges.
 
+## One More Thing - Enterprise Pricing
+
+Take what you are thinking and try __10x that price__ for a fixed price. If they say yes, everyone is happy. If they say no, you can talk about fair pricing for the value you are providing for their business (aka Outcome-based pricing) typically aligned of a cost/revenue metric that matters a lot to your customer.
+
+![Pricing Strategies for AI](/assets/images/stripe_AI_pricing_strategy.png)

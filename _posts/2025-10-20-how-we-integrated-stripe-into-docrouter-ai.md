@@ -12,20 +12,22 @@ At [DocRouter.AI](http://docrouter.ai), we build an AI app for processing docume
 ## Table of Contents
 
 - [Why Use Stripe?](#why-use-stripe)
-- [DocRouter.AI Components](#docrouterai-components)
-- [How Stripe Payments Get Handled](#how_stripe_payments_get_handled)
-- [SPU Credits](#spu_credits)
+- [How Stripe Payments Get Handled](#how-stripe-payments-get-handled)
+- [SPU Credits](#spu-credits)
+- [Pricing Strategy For AI Products](#pricing-strategy-for-ai-products)
+- [DocRouter.AI Software Stack](#docrouterai-software-stack)
 - [Free Tier, Plans, and A-La-Carte Credits](#free-tier-plans-and-a-la-carte-credits)
 - [Prices for Large vs. Small Customers](#prices-for-large-vs-small-customers)
 - [Price Changing Flexibility](#price-changing-flexibility)
+- [Environment Variables](#environment-variables)
 - [The Stripe Product and Price Metadata](#the-stripe-product-and-price-metadata)
 - [Python APIs for Retrieving Products and Prices](#python-apis-for-retrieving-products-and-prices)
 - [Stripe Checkout and Billing Portal](#stripe-checkout-and-billing-portal)
 - [Webhooks and Synchronization](#webhooks-and-synchronization)
 - [MongoDB Schema](#mongodb-schema)
 - [Tracking SPU Usage](#tracking-spu-usage)
-- [Environment Variables](#environment-variables)
 - [Development and Testing with Stripe](#development-and-testing-with-stripe)
+- [Need Help with Your Pricing Strategy?](#need-help-with-your-pricing-strategy)
 
 ## Why Use Stripe?
 

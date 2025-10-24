@@ -46,12 +46,28 @@ On [DocRouter.AI](http://docrouter.ai), customers purchase credits called __SPUs
 
 As long as the credit units are tied to predictable units of operation - for example, number of pages processed in a document - a credit purchase mechanism is a good choice.
 
-## [DocRouter.AI](http://docrouter.ai) components
-Our front end is __Next.JS__, with user authentication implemented through __Next.Auth__. Our back end is __Fast API__. The database is __MongoDB__. 
+## Pricing Strategy For AI Products
 
-DocRouter [supports __MCP__](https://docrouter.ai/docs/mcp/), and agentic __Claude Code__ integration - allowing document workflows to be controlled through a simple chat interface.
+When setting up pricing through Stripe, you have to be strategic. You need to cover the needs of Enterprise customers, but also small companies and occasional users. Some customers prefer to purchase credits a-la-carte, while others prefer the predictability of a monthly subscription.
 
-Users can create an account or organization token, and can control all DocRouter.AI functions through [__REST APIs__](https://docrouter.ai/docs/rest-api/). A [__Python SDK__](https://docrouter.ai/docs/python-sdk/) and a [__Typescript SDK__](https://docrouter.ai/docs/typescript-sdk/) are available.
+Pricing must be tailored to all types of customers you have at the current stage - and, has to be as simple as possible.
+
+The diagram below describes different pricing strategies practiced in the industry:
+
+![Pricing Strategies for AI](/assets/images/stripe_AI_pricing_strategy.png)
+
+Ideally, products would be priced with an __Outcome-Base Model__ (top right quadrant). This works well if a business is vertical in an industry, and if product value has high attribution.
+
+DocRouter.AI is a horizontal, data-layer product - and uses a __Hybrid Pricing Model__ based on monthly subscriptions and/or a-la-carte __SPU__ credit purchases.
+
+## [DocRouter.AI](http://docrouter.ai) Software Stack
+- The DocRouter.AI front end is __Next.JS__, with __Next.Auth__ user authentication
+- The back end is __Fast API__ 
+- Our database is __MongoDB__
+
+DocRouter supports [agentic __Claude Code__ integration and __MCP__](https://docrouter.ai/docs/mcp/), allowing document workflows to be controlled through a simple chat interface.
+
+Users control all DocRouter.AI functions either through the UI, or through [__REST APIs__](https://docrouter.ai/docs/rest-api/), using access tokens. A [__Python SDK__](https://docrouter.ai/docs/python-sdk/) and a [__Typescript SDK__](https://docrouter.ai/docs/typescript-sdk/) are available.
 
 Having the flexibility to control DocRouter programmatically, either through agentic interfacing, or through APIs is great. 
 
@@ -61,7 +77,7 @@ Stripe integration is, thus, an essential ingredient in making this kind of prog
 
 ## Free Tier, Plans, and A-La-Carte Credits
 
-When you are starting, the best pricing is a simple one that your customer understands especially for self-onboaded customers.
+When you are starting, the best pricing is a simple one that your customer understands - especially for self-onboaded customers.
 
 For DocRouter, we want users to start free, upgrade to plans, and be able to buy extra credits without friction. Here's how we did it:
 
@@ -87,16 +103,33 @@ Pricing updates, however, does not impact existing customers (aka grandfathering
 
 How does it all work?
 
+## Environment Variables
+
+Three Stripe-related environment variables are configured for integration:
+
+**`STRIPE_SECRET_KEY`** - Your Stripe API key for authentication. Required to enable Stripe integration.
+
+**`STRIPE_WEBHOOK_SECRET`** - Secret for verifying __webhook__ signatures. The DocRouter.AI __webhook__ is called by Stripe when various events happen: a user started or stopped a subscription, or purchased a-la-carte __SPU__ credits.
+
+**`STRIPE_PRODUCT_TAG`** - The product identifier in metadata (default: `"doc_router"`). Allows filtering prices to find only those belonging to your product.
+
+If `STRIPE_SECRET_KEY` is not set, Stripe integration is disabled and DocRouter operates in local-only mode.
+
 ## The Stripe Product and Price metadata
 
-We use Product and Price __metadata__ in __Stripe__:
+__Stripe__ uses the following 'objects': __Products__, __Prices__ (multiple per product), __Users__ (one per customer), and __Subscriptions__ (each with one or more __Prices__.
+
+We could identify the __Products__ and the __Prices__ by stripe IDs saved as environment variables. However, that is not an advantageous way to set things up.
+
+Instead, we detect Products and Prices by reading their __metadata__ in __Stripe__, and filtering for the Products and Prices configured for our company.
+
+This way, a single Stripe account can be used as an umbrella for potentially multiple products, allowing for future extensibility.
+
 - We create a Stripe __DocRouter Product__ 
 ![DocRouter Product](/assets/images/stripe_product.png)
 
 - And we assign it a `product=doc_router` key/value in the __price metadata__. The __DocRouter.AI__ software detects the product using the Stripe Python API, filtering all products to find specifically the one with this key/value.
 ![DocRouter Product Metadata](/assets/images/stripe_product_metadata.png)
-
-__Stripe__ uses the following 'objects': __Products__, __Prices__ (multiple per product), __Users__ (one per customer), and __Subscriptions__ (each with one or more __Prices__.
 
 - We create two _recurring_ __Prices__ we'll use for monthly subscriptions: the __Individual Price__, and the __Team Price__. We again use _metadata_ to auto-detect the prices:
   - The __Individual Price__ has metadata __included_spus=5000__, __price_type=base__, __tier=individual__.
@@ -316,18 +349,6 @@ The consumption waterfall ensures subscription credits are used first, then purc
 
 Users view their credit utilization on the usage page. All data comes from MongoDB — no Stripe API calls needed to track usage, keeping the UI fast.
 
-## Environment Variables
-
-Three Stripe-related environment variables configure the integration:
-
-**`STRIPE_SECRET_KEY`** - Your Stripe API key for authentication. Required to enable Stripe integration.
-
-**`STRIPE_WEBHOOK_SECRET`** - Secret for verifying webhook signatures. Ensures webhook events are legitimate and not forged.
-
-**`STRIPE_PRODUCT_TAG`** - The product identifier in metadata (default: `"doc_router"`). Allows filtering prices to find only those belonging to your product.
-
-If `STRIPE_SECRET_KEY` is not set, Stripe integration is disabled and DocRouter operates in local-only mode.
-
 ## Development and Testing with Stripe
 
 Stripe provides separate test and production environments. During development, we use **test mode** keys:
@@ -350,13 +371,11 @@ For production, swap to live keys (`sk_live_*`). The same code works in both mod
 
 This separation lets us develop and debug payment flows safely without risking real customer data or charges.
 
-## One More Thing - Enterprise Pricing
+## Need Help with Your Pricing Strategy?
 
 Take what you are thinking and try __10x that price__ for a fixed price. If they say yes, everyone is happy. If they say no, you can talk about fair pricing for the value you are providing for their business (aka Outcome-based pricing) typically aligned of a cost/revenue metric that matters a lot to your customer.
 
 ![Pricing Strategies for AI](/assets/images/stripe_AI_pricing_strategy.png)
-
-## Need Help with Your Pricing Strategy?
 
 If you're implementing your own pricing strategy and need expert advice, Randy Carlton offers consultation on pricing for AI and SaaS businesses.
 

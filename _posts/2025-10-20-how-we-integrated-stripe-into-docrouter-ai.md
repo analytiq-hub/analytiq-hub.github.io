@@ -2,6 +2,7 @@
 layout: post
 title: "How We Integrated Stripe Into DocRouter.AI"
 date: 2025-10-20 00:00:00 +0000
+author: "Andrei Radulescu-Banu & Randy Carlton"
 image: /assets/images/how_to_integrate_stripe.png
 categories: [tech, programming, ai, tutorials]
 ---
@@ -343,3 +344,40 @@ This separation lets us develop and debug payment flows safely without risking r
 Take what you are thinking and try __10x that price__ for a fixed price. If they say yes, everyone is happy. If they say no, you can talk about fair pricing for the value you are providing for their business (aka Outcome-based pricing) typically aligned of a cost/revenue metric that matters a lot to your customer.
 
 ![Pricing Strategies for AI](/assets/images/stripe_AI_pricing_strategy.png)
+
+## Need Help with Your Pricing Strategy?
+
+If you're implementing your own pricing strategy and need expert advice, Randy Carlton offers consultation on pricing for AI and SaaS businesses.
+
+<div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg shadow-lg p-8 mt-12">
+    <div class="text-center">
+        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Get Pricing Strategy Advice</h3>
+        <p class="text-gray-600 mb-6">
+            Book a 30-minute consultation with Randy Carlton to discuss your pricing challenges and get expert guidance on implementing effective pricing strategies for your AI business.
+        </p>
+        <div class="w-full max-w-sm mx-auto">
+            <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-0.5">
+                <button onclick="openRandyCalendlyModal()"
+                        class="w-full bg-white hover:bg-gray-50 text-blue-600 hover:text-purple-600 text-center px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 shadow-lg hover:shadow-xl">
+                    Schedule with Randy
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function openRandyCalendlyModal() {
+    // Check if we're on mobile
+    const isMobile = window.innerWidth <= 768;
+    
+    if (isMobile) {
+        // For mobile, redirect to Calendly URL directly
+        const calendlyUrl = 'https://calendly.com/randycarlton/30m-virtual-meeting';
+        window.location.href = calendlyUrl;
+    } else {
+        // For desktop, open in new window
+        window.open('https://calendly.com/randycarlton/30m-virtual-meeting', '_blank', 'width=800,height=600,scrollbars=yes,resizable=yes');
+    }
+}
+</script>

@@ -13,6 +13,8 @@ At [DocRouter.AI](http://docrouter.ai), we build an AI app for processing docume
 
 - [Why Use Stripe?](#why-use-stripe)
 - [DocRouter.AI Components](#docrouterai-components)
+- [How Stripe Payments Get Handled](#how_stripe_payments_get_handled)
+- [SPU Credits](#spu_credits)
 - [Free Tier, Plans, and A-La-Carte Credits](#free-tier-plans-and-a-la-carte-credits)
 - [Prices for Large vs. Small Customers](#prices-for-large-vs-small-customers)
 - [Price Changing Flexibility](#price-changing-flexibility)
@@ -27,13 +29,22 @@ At [DocRouter.AI](http://docrouter.ai), we build an AI app for processing docume
 
 ## Why Use Stripe?
 
-Stripe handles payments securely and scales with our app. It supports __subscriptions__ for recurring plans, __one-time charges__ for credits, and __webhooks__ for real-time updates.
+Stripe handles the credit card transactions, and handles global currencies/taxes. For an AI app with variable usage, it's essential — manual billing would be error-prone and slow. Companies using Stripe don't need to deal with credit cards. They only need to identify the customers by a unique customer ID managed by Stripe.
 
-Customers are able to purchase credits we call __SPUs__ (Service Processing Units) - this is our abstraction for LLM usage like token counts. Many other SAAS companies use the same credit-purchase based mechanism. Our inspiration came from Databricks, which measures credits as __DBUs__ (Databricks Processing Units).
+## How Stripe Payments Get Handled
+
+Stripe supports: 
+- __subscriptions__ for recurring plans
+- __one-time charges__ for credits, 
+- __webhooks__ for real-time updates.
+
+It also supports __metered__ charges, but we will not use the __Stripe__ implementation for meters. It is more convenient to implement our own __metered__ support, keeping track on our platform of usage, and charge through __Stripe__ the monthly cost.
+
+## SPU Credits
+
+On [DocRouter.AI](http://docrouter.ai), customers purchase credits called __SPUs__ (Service Processing Units) - this is our abstraction for document page processing, and for LLM token use. Many other SAAS companies use a credit-purchase based mechanism. For example, Databricks measures credits as __DBUs__ (Databricks Processing Units), and charges hourly cluster usage a number of __DBUs__ that depends on the cluster size.
 
 As long as the credit units are tied to predictable units of operation - for example, number of pages processed in a document - a credit purchase mechanism is a good choice.
-
-Stripe reduces fraud risks with built-in tools like Radar and handles global currencies/taxes. For an AI app with variable usage, it's essential — manual billing would be error-prone and slow.
 
 ## [DocRouter.AI](http://docrouter.ai) components
 Our front end is __Next.JS__, with user authentication implemented through __Next.Auth__. Our back end is __Fast API__. The database is __MongoDB__. 

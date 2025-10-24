@@ -121,7 +121,11 @@ If `STRIPE_SECRET_KEY` is not set, Stripe integration is disabled and DocRouter 
 
 __Stripe__ uses the following 'objects': __Products__, __Prices__ (multiple per product), __Users__ (one per customer), and __Subscriptions__ (each with one or more __Prices__.
 
-We could identify the __Products__ and the __Prices__ by stripe IDs saved as environment variables. However, that is not an advantageous way to set things up.
+<div class="flex justify-center my-4">
+  <img src="/assets/images/stripe_doc_router_diagram.png" alt="Stripe DocRouter.AI Diagram">
+</div>
+
+We could identify the __Products__ and the __Prices__ by stripe IDs saved as environment variables, similar to how we use the __STRIPE_SECRET_KEY__. However, that is not an advantageous way to set things up.
 
 Instead, we detect Products and Prices by reading their __metadata__ in __Stripe__, and filtering for the Products and Prices configured for our company.
 
@@ -238,10 +242,6 @@ session = stripe.billing_portal.Session.create(
 ```
 
 The portal lets users update payment methods, view invoices, and cancel subscriptions—all handled by Stripe.
-
-<div class="flex justify-center my-4">
-  <img src="/assets/images/stripe_doc_router_diagram.png" alt="Stripe DocRouter.AI Diagram">
-</div>
 
 ## Webhooks and Synchronization
 

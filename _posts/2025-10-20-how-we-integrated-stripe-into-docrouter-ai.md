@@ -149,7 +149,7 @@ The DocRouter.AI detects the prices and the tier limits from the metadata.
 
 ## Python APIs for Retrieving Products and Prices
 
-DocRouter.AI uses the Stripe Python SDK to dynamically fetch pricing configuration at startup. Here's how:
+DocRouter.AI uses the Stripe Python SDK to dynamically fetch pricing configuration at startup. The complete implementation can be found in our [payments.py](https://github.com/analytiq-hub/doc-router/blob/main/packages/python/docrouter_app/routes/payments.py) file. Here's how the key parts work:
 
 ### Retrieving All Prices with Product Data
 

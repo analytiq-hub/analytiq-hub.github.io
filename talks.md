@@ -25,6 +25,27 @@ permalink: /talks/
                 image="/assets/images/sigagent_ai_tinkerers_talk.png"
                 links="https://boston.aitinkerers.org/p/ai-tinkerers-boston-meetup-november-2025;Event Details|https://www.linkedin.com/feed/update/urn:li:activity:7395834753372876800/;LinkedIn Post"
                 abstract="AI agents have become powerful and reliable, but you need to build them right. With 50% of new agents now built with Claude Code, the ecosystem has opened up for integration with MCP, marketplaces, plugins, and SKILLS.md. What's missing? AI Agent Evaluation for debugging during development, and for guardrails and monetization during deployment. SigAgent.AI specializes in tracing Claude agents using Open Telemetry and step-by-step, hook-level monitoring. We covered how to build Claude Agents with SigAgent.AI traceability, what works and what doesn't with MCP tools, CLAUDE.md, SKILLS.md and MCP-as-code, and how to stand up agent infrastructure for value-based and usage-based pricing."
+                title="How To Integrate Stripe Into Your AI Application"
+                speaker="Andrei Radulescu-Banu"
+                date="Oct 24, 2025"
+                event="AI Tinkerers"
+                event_url="https://boston.aitinkerers.org/"
+                logos="/assets/images/aitinkerers-1.png"
+                image="/assets/images/how_to_integrate_stripe.png"
+                links="https://boston.aitinkerers.org/p/ai-tinkerers-boston-meetup-october-2025;Event Details|https://www.linkedin.com/feed/update/urn:li:activity:7387836092588240896/;LinkedIn Post|/tech/programming/ai/tutorials/how-we-integrated-stripe-into-docrouter-ai/;Blog Post"
+                abstract="How did we built Stripe billing into DocRouter.AI? The talk covered why Stripe was the right choice for scaling metered AI usage, our SPU (Service Processing Units) credit system inspired by Databricks DBUs, free tier → plans → a-la-carte credits with consumption waterfall, dynamic pricing config 100% in Stripe metadata, async Stripe API calls in FastAPI, and our MongoDB backend schema."
+            %}
+
+            {% include talk-card.html 
+                title="How To Train Your AI Agent"
+                speaker="Andrei Radulescu-Banu"
+                date="Oct 15, 2025"
+                event="AI Camp"
+                event_url="https://www.aicamp.ai/event/eventdetails/W2024072614"
+                logos="/assets/images/ai-camp.png"
+                image="/assets/images/how_to_train_your_ai_agent.png"
+                links="https://www.aicamp.ai/event/eventdetails/W2025101515;Event Details|https://docs.google.com/presentation/d/1GFcD4bruJBJPFeJkPp_K-MfkU8ZrHtgfrV7WoLumKd4;Slides|https://www.linkedin.com/feed/update/urn:li:activity:7384733807968526337/;LinkedIn Post|https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7384621615977820160/;LinkedIn Post|https://www.linkedin.com/feed/update/urn:li:activity:7383136087935832064/;LinkedIn Post|https://www.linkedin.com/feed/update/urn:li:activity:7384566447072616448/;LinkedIn Post"
+                abstract="What are the steps to create an AI Agent? Our AI Camp talk is a deep-dive into how AI Agents are implemented, in practice. With lessons learned from our DocRouter.AI coding agent, and our consulting engagement implementing a coding agent for lab information management systems company Starlims."
             %}
 
             {% include talk-card.html 

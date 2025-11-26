@@ -243,7 +243,7 @@ permalink: /technology/
                                     <span class="text-gray-600 text-xl">🔄</span>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold text-gray-900 text-sm">Airbyte</h4>
+                                    <h4 class="font-semibold text-gray-900 text-sm">Airbyte, Fivetran</h4>
                                     <p class="text-gray-600 text-xs">Open-source ETL for knowledge base syncing (e.g., Zendesk to S3)—automating data ingestion for RAG pipelines</p>
                                 </div>
                             </div>
@@ -286,6 +286,17 @@ permalink: /technology/
                                 <div>
                                     <h4 class="font-semibold text-gray-900 text-sm">TypeScript</h4>
                                     <p class="text-gray-600 text-xs">Type-safe development reducing bugs and improving maintainability. Used in NextJS/TS for chat servers and portals, including Cursor IDE for AI-enhanced development</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg p-4 hover:from-gray-100 hover:to-gray-200 transition-all duration-200">
+                            <div class="flex items-start space-x-3">
+                                <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+                                    <span class="text-gray-600 text-xl">🤖</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 text-sm">Claude Agents, MCP, Skills</h4>
+                                    <p class="text-gray-600 text-xs">Build intelligent agents with Multi-Chat Protocol, reusable skills, and marketplace integrations for extensible AI workflows</p>
                                 </div>
                             </div>
                         </div>

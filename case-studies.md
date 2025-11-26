@@ -54,6 +54,16 @@ permalink: /case-studies/
                 title="Supply Chain Automation That Delivers Results" 
                 description="AI-powered trade document processing reducing manual work from hours to minutes" 
                 url="/case-studies/supply-chain/" %}
+            
+            {% include case-study-card.html 
+                title="Lab Informatics Coding Copilot - AI-Powered Development Acceleration" 
+                description="How we built an AI-powered coding copilot that significantly reduced form configuration time and enabled rapid customizations for global lab teams" 
+                url="/case-studies/starlims-copilot/" %}
+            
+            {% include case-study-card.html 
+                title="Lab Informatics Support That Accelerates Resolution" 
+                description="How we built an in-product AI agent that significantly reduced support query times and enabled scalable knowledge access for global lab teams" 
+                url="/case-studies/starlims-chat/" %}
             </div>
         </main>
     </div>

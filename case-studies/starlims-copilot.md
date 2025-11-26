@@ -1,6 +1,6 @@
 ---
 layout: case-study
-title: Starlims Coding Copilot - AI-Powered Development Acceleration
+title: Lab Informatics Coding Copilot - AI-Powered Development Acceleration
 subtitle: How we built an AI-powered coding copilot that significantly reduced form configuration time and enabled rapid customizations for global lab teams
 permalink: /case-studies/starlims-copilot/
 ---

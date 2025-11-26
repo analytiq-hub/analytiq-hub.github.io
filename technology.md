@@ -11,6 +11,9 @@ permalink: /technology/
             <p class="text-xl max-w-3xl mx-auto mb-6">
                 At Analytiq Hub, we don't just use technology—we orchestrate it to automate workflows, extract insights, and drive efficiency across industries like finance, healthcare, and logistics. Let's walk through how we do it.
             </p>
+            <div class="mb-4">
+                <span class="inline-block bg-white bg-opacity-20 text-white px-4 py-1 rounded-full text-sm font-semibold">New: Enhanced for Starlims AI Solutions</span>
+            </div>
             <a href="#foundation" class="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold">Explore Our Stack</a>
         </section>
 
@@ -28,7 +31,7 @@ permalink: /technology/
                     </div>
                     <h3 class="text-xl font-medium text-gray-900 mb-2">AWS</h3>
                     <p class="text-gray-600 text-sm">
-                        Broadest service ecosystem and mature tooling—ideal for complex processing with services like S3, EC2, EKS,SQS, SES, Lambda, Bedrock.
+                        Broadest service ecosystem and mature tooling—ideal for complex processing with services like S3, EC2, ECS, EKS, SQS, SES, Lambda, Bedrock.
                     </p>
                 </div>
                 
@@ -73,7 +76,7 @@ permalink: /technology/
             <p class="text-lg text-gray-600 mb-8 max-w-3xl mx-auto text-center">
                 Next, we infuse intelligence. Using advanced AI, we streamline complex processes, automate repetitive tasks, uncover actionable insights, and enhance decision-making, achieving human-in-the-loop accuracy and efficiency for regulated industries.
             </p>
-            <div class="grid md:grid-cols-3 gap-6">
+            <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
                 <!-- OpenAI & Anthropic Card -->
                 <div class="bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg p-6 text-center hover:shadow-xl transition-shadow">
                     <div class="w-12 h-12 bg-green-100 rounded-full mx-auto mb-4 flex items-center justify-center">
@@ -81,7 +84,18 @@ permalink: /technology/
                     </div>
                     <h3 class="text-xl font-medium text-gray-900 mb-2">OpenAI, Anthropic, Gemini</h3>
                     <p class="text-gray-600 text-sm">
-                        Power intelligent document extraction and analysis—transforming unstructured PDFs into structured data with 95%+ accuracy.
+                        Power coding agents, chat, and intelligent document extraction.
+                    </p>
+                </div>
+                
+                <!-- Claude Code + MCP Card -->
+                <div class="bg-gradient-to-br from-slate-50 to-gray-100 rounded-lg p-6 text-center hover:shadow-xl transition-shadow">
+                    <div class="w-12 h-12 bg-slate-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <span class="text-slate-600 text-2xl">💻</span>
+                    </div>
+                    <h3 class="text-xl font-medium text-gray-900 mb-2">Claude Code + MCP</h3>
+                    <p class="text-gray-600 text-sm">
+                        Agentic coding tools with Multi-Chat Protocol—streamlining code generation for custom languages like SSL/XFD in Starlims.
                     </p>
                 </div>
                 
@@ -95,18 +109,7 @@ permalink: /technology/
                         Build sophisticated RAG pipelines and agent workflows—enabling context-aware AI that understands your business domain.
                     </p>
                 </div>
-                
-                <!-- PyTorch & Custom Models Card -->
-                <div class="bg-gradient-to-br from-orange-50 to-amber-100 rounded-lg p-6 text-center hover:shadow-xl transition-shadow">
-                    <div class="w-12 h-12 bg-orange-100 rounded-full mx-auto mb-4 flex items-center justify-center">
-                        <span class="text-orange-600 text-2xl">⚡</span>
-                    </div>
-                    <h3 class="text-xl font-medium text-gray-900 mb-2">PyTorch & Fine-tuning</h3>
-                    <p class="text-gray-600 text-sm">
-                        Create custom models for specialized tasks—fine-tuned on your data for industry-specific document classification and extraction.
-                    </p>
-                </div>
-                
+
                 <!-- LiteLLM & Multi-Provider Card -->
                 <div class="bg-gradient-to-br from-purple-50 to-violet-100 rounded-lg p-6 text-center hover:shadow-xl transition-shadow">
                     <div class="w-12 h-12 bg-purple-100 rounded-full mx-auto mb-4 flex items-center justify-center">
@@ -117,6 +120,18 @@ permalink: /technology/
                         Seamlessly switch between AI providers—optimizing for cost, speed, and accuracy while avoiding vendor lock-in.
                     </p>
                 </div>
+
+                <!-- PyTorch & Custom Models Card -->
+                <div class="bg-gradient-to-br from-orange-50 to-amber-100 rounded-lg p-6 text-center hover:shadow-xl transition-shadow">
+                    <div class="w-12 h-12 bg-orange-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <span class="text-orange-600 text-2xl">⚡</span>
+                    </div>
+                    <h3 class="text-xl font-medium text-gray-900 mb-2">PyTorch & Fine-tuning</h3>
+                    <p class="text-gray-600 text-sm">
+                        Create custom models for specialized tasks—fine-tuned on your data for computer vision and text processing.
+                    </p>
+                </div>
+            
                 
                 <!-- MLFlow & Model Management Card -->
                 <div class="bg-gradient-to-br from-indigo-50 to-blue-100 rounded-lg p-6 text-center hover:shadow-xl transition-shadow">
@@ -139,6 +154,41 @@ permalink: /technology/
                         Streamline data labeling and quality control—enabling human-in-the-loop workflows for continuous model improvement.
                     </p>
                 </div>
+                
+                <!-- Pinecone Card -->
+                <div class="bg-gradient-to-br from-teal-50 to-cyan-100 rounded-lg p-6 text-center hover:shadow-xl transition-shadow">
+                    <div class="w-12 h-12 bg-teal-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <span class="text-teal-600 text-2xl">🔍</span>
+                    </div>
+                    <h3 class="text-xl font-medium text-gray-900 mb-2">Pinecone & Weaviate & PGVector</h3>
+                    <p class="text-gray-600 text-sm">
+                        Serverless vector database for semantic search—enabling fast RAG retrieval.
+                    </p>
+                </div>
+                
+                <!-- Ragas Card -->
+                <div class="bg-gradient-to-br from-yellow-50 to-amber-100 rounded-lg p-6 text-center hover:shadow-xl transition-shadow">
+                    <div class="w-12 h-12 bg-yellow-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <span class="text-yellow-600 text-2xl">📊</span>
+                    </div>
+                    <h3 class="text-xl font-medium text-gray-900 mb-2">Ragas & SigAgent.AI</h3>
+                    <p class="text-gray-600 text-sm">
+                        Offline/online evaluation for AI agents and chaybots —measuring accuracy, completeness, and cost.
+                    </p>
+                </div>
+                
+                <!-- Stripe Integration Card -->
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-100 rounded-lg p-6 text-center hover:shadow-xl transition-shadow">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <span class="text-indigo-600 text-2xl">💳</span>
+                    </div>
+                    <h3 class="text-xl font-medium text-gray-900 mb-2">Stripe Integration</h3>
+                    <p class="text-gray-600 text-sm">
+                        Seamless payment processing and subscription management—enabling secure billing for AI-powered SaaS solutions.
+                    </p>
+                </div>
+
+                
             </div>
         </section>
 
@@ -187,7 +237,19 @@ permalink: /technology/
                                 </div>
                             </div>
                         </div>
+                        <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg p-4 hover:from-gray-100 hover:to-gray-200 transition-all duration-200">
+                            <div class="flex items-start space-x-3">
+                                <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+                                    <span class="text-gray-600 text-xl">🔄</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 text-sm">Airbyte</h4>
+                                    <p class="text-gray-600 text-xs">Open-source ETL for knowledge base syncing (e.g., Zendesk to S3)—automating data ingestion for RAG pipelines</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <p class="text-gray-500 text-xs mt-2 text-center italic">Custom chunking with libraries like Chonkie for optimized document processing</p>
                 </div>
                 
                 <!-- Development & Integration Sub-section -->
@@ -223,7 +285,18 @@ permalink: /technology/
                                 </div>
                                 <div>
                                     <h4 class="font-semibold text-gray-900 text-sm">TypeScript</h4>
-                                    <p class="text-gray-600 text-xs">Type-safe development reducing bugs and improving maintainability</p>
+                                    <p class="text-gray-600 text-xs">Type-safe development reducing bugs and improving maintainability. Used in NextJS/TS for chat servers and portals, including Cursor IDE for AI-enhanced development</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg p-4 hover:from-gray-100 hover:to-gray-200 transition-all duration-200">
+                            <div class="flex items-start space-x-3">
+                                <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+                                    <span class="text-gray-600 text-xl">🔌</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 text-sm">VSCode Extensions</h4>
+                                    <p class="text-gray-600 text-xs">Custom extensions for AI-assisted coding—integrating copilots with local file mirrors and form designers</p>
                                 </div>
                             </div>
                         </div>

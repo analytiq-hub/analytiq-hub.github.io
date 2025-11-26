@@ -351,6 +351,17 @@ permalink: /technology/
                                 </div>
                             </div>
                         </div>
+                        <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg p-4 hover:from-gray-100 hover:to-gray-200 transition-all duration-200">
+                            <div class="flex items-start space-x-3">
+                                <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+                                    <span class="text-gray-600 text-xl">🔀</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 text-sm">GitHub, GitLab</h4>
+                                    <p class="text-gray-600 text-xs">Version control and CI/CD pipelines for collaborative development and automated deployments</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -270,23 +270,7 @@ bundle install
 - **Contributing**: Pull requests welcome for theme improvements
 - **Migration Support**: Contact us for help upgrading from manual Analytiq Pages setups
 
-## What's Next
-
-This v0.1.6 release includes important fixes and improvements:
-
-- ✅ **Jekyll 4.x support** - Works with both GitHub Pages (Jekyll 3.x) and modern Jekyll 4.x
-- ✅ **Complete SASS files** - All required stylesheets included
-- ✅ **Modern Sass syntax** - Using `@use` instead of deprecated `@import`
-- ✅ **Fully tested installation** - Simple, one-command setup verified
-
-Future updates will include:
-
-- **Additional layouts** for specialized use cases
-- **More Tailwind components** for common UI patterns
-- **Enhanced Excalidraw features** and diagram management
-- **Performance optimizations** and accessibility improvements
-
-## Conclusion
+## How This Fits Into Your Stack
 
 Analytiq Pages Theme transforms our proven methodology into a professional, reusable solution that makes building beautiful company websites accessible to everyone. Whether you're launching a startup, building client sites, or managing enterprise web presence, this theme delivers the perfect balance of simplicity and power.
 

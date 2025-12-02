@@ -17,7 +17,13 @@
         </div>
         {% endif %}
         <div>
+            {% if include.linkedin %}
+            <a href="{{ include.linkedin }}" target="_blank" rel="noopener noreferrer" class="font-bold text-gray-900 hover:text-blue-600 transition-colors duration-200">
+                {{ include.name }}
+            </a>
+            {% else %}
             <div class="font-bold text-gray-900">{{ include.name }}</div>
+            {% endif %}
             <div class="text-gray-600">{{ include.title }}</div>
             {% if include.company %}
             <div class="text-gray-500 text-sm">{{ include.company }}</div>

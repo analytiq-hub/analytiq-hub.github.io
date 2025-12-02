@@ -57,14 +57,16 @@ title: "Analytiq Hub - Data+AI Solutions"
                     name="Kevin Chen"
                     title="Director of Engineering"
                     company="Ashvin.AI"
-                    image="/assets/images/kevin_chen.jpg" %}
+                    image="/assets/images/kevin_chen.jpg"
+                    linkedin="https://www.linkedin.com/in/kev1nch3n/" %}
                     
                 {% include testimonial-card.html 
                     quote="...Thanks to his contributions, we made tremendous progress and significantly accelerated our AI roadmap. Would definitely recommend him to any team that is looking for guidance in implementing AI. He is an outstanding engineer and architect."
                     name="Marius Popovici"
                     title="Senior Software Engineering Manager"
                     company="STARLIMS"
-                    image="/assets/images/marius_popovici.jpg" %}
+                    image="/assets/images/marius_popovici.jpg"
+                    linkedin="https://www.linkedin.com/in/mariuspopovici/" %}
                 
                 <!-- Hidden testimonials (shown on "Load More") -->
                 <div class="testimonial-hidden hidden">
@@ -73,7 +75,8 @@ title: "Analytiq Hub - Data+AI Solutions"
                         name="Albert Woo"
                         title="President"
                         company="Boston Medical Data"
-                        image="/assets/images/albert_woo.jpeg" %}
+                        image="/assets/images/albert_woo.jpeg"
+                        linkedin="https://www.linkedin.com/in/albert-woo-56a96168/" %}
                 </div>
                 
                 <div class="testimonial-hidden hidden">
@@ -81,7 +84,8 @@ title: "Analytiq Hub - Data+AI Solutions"
                         quote="Andrei continues to impress over the 20+ years I've known him. He listens to customer needs and applies the right technologies and processes to the solution. And now he's leading the way with value-building AI solutions."
                         name="Brian Suthoff"
                         title="Entrepreneur & Investor"
-                        image="/assets/images/brian_suthoff.jpeg" %}
+                        image="/assets/images/brian_suthoff.jpeg"
+                        linkedin="https://www.linkedin.com/in/suthoff/" %}
                 </div>
                 
                 <div class="testimonial-hidden hidden">
@@ -90,7 +94,8 @@ title: "Analytiq Hub - Data+AI Solutions"
                         name="Bill Liu"
                         title="Founder"
                         company="AICamp"
-                        image="/assets/images/bill_liu.jpeg" %}
+                        image="/assets/images/bill_liu.jpeg"
+                        linkedin="https://www.linkedin.com/in/billliu1202/" %}
                 </div>
             </div>
             

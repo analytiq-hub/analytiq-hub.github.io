@@ -50,34 +50,95 @@ title: "Analytiq Hub - Data+AI Solutions"
         <!-- Testimonials Section -->
         <section class="bg-blue-50 rounded-lg shadow-lg p-8 mb-12">
             <h2 class="text-3xl font-semibold text-gray-900 mb-8 text-center">What Our Clients Say</h2>
-            <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-                {% include testimonial-card.html 
-                    quote="Analytiq helped us create custom AI solutions for the healthcare industry. Andrei has great knowledge of the current AI technologies and helped us apply them in an effective manner. Their experience helped generate tremendous value to our business."
-                    name="Albert Woo"
-                    title="President"
-                    company="Boston Medical Data"
-                    image="/assets/images/albert_woo.jpeg" %}
-                
+            <div id="testimonials-container" class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <!-- Featured testimonials (always visible) -->
                 {% include testimonial-card.html 
                     quote="Analytiq Hub was fundamental to our early growth. Andrei helped us with foundational architectural decisions that drove our early successes. Highly recommended for early startups looking for technical leadership!"
                     name="Kevin Chen"
                     title="Director of Engineering"
+                    company="Ashvin.AI"
                     image="/assets/images/kevin_chen.jpg" %}
-                
+                    
                 {% include testimonial-card.html 
-                    quote="Andrei continues to impress over the 20+ years I've known him. He listens to customer needs and applies the right technologies and processes to the solution. And now he's leading the way with value-building AI solutions."
-                    name="Brian Suthoff"
-                    title="Entrepreneur & Investor"
-                    image="/assets/images/brian_suthoff.jpeg" %}
+                    quote="...Thanks to his contributions, we made tremendous progress and significantly accelerated our AI roadmap. Would definitely recommend him to any team that is looking for guidance in implementing AI. He is an outstanding engineer and architect."
+                    name="Marius Popovici"
+                    title="Senior Software Engineering Manager"
+                    company="STARLIMS"
+                    image="/assets/images/marius_popovici.jpg" %}
                 
-                {% include testimonial-card.html 
-                    quote="🎉🎉 a fantastic meetup last week in Boston by AICamp Boston community. Thanks speakers Andrei Radulescu-Banu … for their deep dive into cutting-edge tech and insightful discussions."
-                    name="Bill Liu"
-                    title="Founder"
-                    company="AICamp"
-                    image="/assets/images/bill_liu.jpeg" %}
+                <!-- Hidden testimonials (shown on "Load More") -->
+                <div class="testimonial-hidden hidden">
+                    {% include testimonial-card.html 
+                        quote="Analytiq helped us create custom AI solutions for the healthcare industry. Andrei has great knowledge of the current AI technologies and helped us apply them in an effective manner. Their experience helped generate tremendous value to our business."
+                        name="Albert Woo"
+                        title="President"
+                        company="Boston Medical Data"
+                        image="/assets/images/albert_woo.jpeg" %}
+                </div>
+                
+                <div class="testimonial-hidden hidden">
+                    {% include testimonial-card.html 
+                        quote="Andrei continues to impress over the 20+ years I've known him. He listens to customer needs and applies the right technologies and processes to the solution. And now he's leading the way with value-building AI solutions."
+                        name="Brian Suthoff"
+                        title="Entrepreneur & Investor"
+                        image="/assets/images/brian_suthoff.jpeg" %}
+                </div>
+                
+                <div class="testimonial-hidden hidden">
+                    {% include testimonial-card.html 
+                        quote="🎉🎉 a fantastic meetup last week in Boston by AICamp Boston community. Thanks speakers Andrei Radulescu-Banu … for their deep dive into cutting-edge tech and insightful discussions."
+                        name="Bill Liu"
+                        title="Founder"
+                        company="AICamp"
+                        image="/assets/images/bill_liu.jpeg" %}
+                </div>
+            </div>
+            
+            <!-- Load More / Load Less Button -->
+            <div class="text-center mt-8">
+                <button id="load-more-testimonials" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200">
+                    Load More Testimonials
+                </button>
             </div>
         </section>
+
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loadMoreBtn = document.getElementById('load-more-testimonials');
+            const hiddenTestimonials = document.querySelectorAll('.testimonial-hidden');
+            let isExpanded = false;
+            
+            if (hiddenTestimonials.length === 0) {
+                // Hide button if there are no hidden testimonials
+                loadMoreBtn.parentElement.style.display = 'none';
+                return;
+            }
+            
+            loadMoreBtn.addEventListener('click', function() {
+                if (!isExpanded) {
+                    // Show all hidden testimonials
+                    hiddenTestimonials.forEach(function(testimonial) {
+                        testimonial.classList.remove('hidden');
+                    });
+                    loadMoreBtn.textContent = 'Load Less';
+                    isExpanded = true;
+                } else {
+                    // Hide testimonials again
+                    hiddenTestimonials.forEach(function(testimonial) {
+                        testimonial.classList.add('hidden');
+                    });
+                    loadMoreBtn.textContent = 'Load More Testimonials';
+                    isExpanded = false;
+                    
+                    // Scroll to testimonials section after collapsing
+                    const testimonialsSection = document.querySelector('#testimonials-container').closest('section');
+                    if (testimonialsSection) {
+                        testimonialsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }
+            });
+        });
+        </script>
 
         <!-- Services Section -->
         <section class="bg-white rounded-lg shadow-lg p-8 mb-12">

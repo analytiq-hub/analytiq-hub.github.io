@@ -70,6 +70,15 @@ title: "Analytiq Hub - Data+AI Solutions"
                 
                 <!-- Hidden testimonials (shown on "Load More") -->
                 <div class="testimonial-hidden hidden">
+                    {% include testimonial-card.html
+                        quote="Andrei was instrumental to our efforts to build a foundation of our AI co-pilot and chat assistant at STARLIMS. Andrei quickly learned the STARLIMS product, tech, goals and deliverables. In just a few months, in partnership with our team, he delivered a foundation that will transform our business by reducing both development and support times for STARLIMS and our customers."
+                        name="Lauren Whitsell"
+                        title="Product Manager"
+                        company="STARLIMS"
+                        image="/assets/images/lauren_whitsell.jpg" %}
+                </div>
+
+                <div class="testimonial-hidden hidden">
                     {% include testimonial-card.html 
                         quote="Analytiq helped us create custom AI solutions for the healthcare industry. Andrei has great knowledge of the current AI technologies and helped us apply them in an effective manner. Their experience helped generate tremendous value to our business."
                         name="Albert Woo"
@@ -89,7 +98,7 @@ title: "Analytiq Hub - Data+AI Solutions"
                 </div>
                 
                 <div class="testimonial-hidden hidden">
-                    {% include testimonial-card.html 
+                    {% include testimonial-card.html
                         quote="🎉🎉 a fantastic meetup last week in Boston by AICamp Boston community. Thanks speakers Andrei Radulescu-Banu … for their deep dive into cutting-edge tech and insightful discussions."
                         name="Bill Liu"
                         title="Founder"
@@ -97,6 +106,7 @@ title: "Analytiq Hub - Data+AI Solutions"
                         image="/assets/images/bill_liu.jpeg"
                         linkedin="https://www.linkedin.com/in/billliu1202/" %}
                 </div>
+
             </div>
             
             <!-- Load More / Load Less Button -->

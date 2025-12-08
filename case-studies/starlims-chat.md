@@ -78,3 +78,12 @@ Our solution combines proven technologies to deliver reliable performance for la
 **Future-Proof Foundation**: The modular design allows rapid expansion into advanced features like agentic integrations and monitoring dashboards—creating a sustainable advantage in the $10B+ lab informatics market.
 
 **Industry Recognition**: By embedding AI directly into their products, Starlims establishes itself as an innovator in lab support, opening doors to new partnerships and enhanced customer retention.
+
+## Client Feedback
+
+{% include testimonial-card.html
+    quote="Andrei was instrumental to our efforts to build a foundation of our AI co-pilot and chat assistant at STARLIMS. Andrei quickly learned the STARLIMS product, tech, goals and deliverables. In just a few months, in partnership with our team, he delivered a foundation that will transform our business by reducing both development and support times for STARLIMS and our customers."
+    name="Lauren Whitsell"
+    title="Product Manager"
+    company="STARLIMS"
+    image="/assets/images/lauren_whitsell.jpg" %}

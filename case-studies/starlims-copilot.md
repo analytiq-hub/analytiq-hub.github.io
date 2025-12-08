@@ -71,3 +71,15 @@ Our solution leverages robust technologies to support efficient lab development:
 
 **Industry Recognition**: By accelerating custom LIMS development, Starlims solidifies its leadership, fostering partnerships and boosting retention through AI-driven efficiency.
 
+## Client Feedback
+
+{% include testimonial-card.html 
+    quote="Andrei helped us bring several AI initiatives to MVP stage. I was impressed with Andrei's expertise across a wide range of subjects. He has a deep understanding of AI and software architecture and the experience with real-life implementation to turn ideas into production-ready solutions. Thanks to his contributions, we made tremendous progress and significantly accelerated our AI roadmap. 
+
+    Would definitely recommend him to any team that is looking for guidance in implementing AI. He is an outstanding engineer and architect."
+    name="Marius Popovici"
+    title="Senior Software Engineering Manager"
+    company="STARLIMS"
+    image="/assets/images/marius_popovici.jpg"
+    linkedin="https://www.linkedin.com/in/mariuspopovici/" %}
+

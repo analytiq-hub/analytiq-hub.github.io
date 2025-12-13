@@ -16,6 +16,18 @@ permalink: /talks/
         <!-- Talks Container -->
         <div class="space-y-8" id="talks-container">
             {% include talk-card.html 
+                title="The 'One Codebase, Many Products' Playbook"
+                speaker="Andrei Radulescu-Banu"
+                date="Dec 11, 2025"
+                event="AI Camp"
+                event_url="https://www.aicamp.ai/event/eventdetails/W2025121015"
+                logos="/assets/images/ai-camp.png"
+                image="/assets/images/talk-one-codebase.png"
+                links="https://www.aicamp.ai/event/eventdetails/W2025121015;Event Details|https://docs.google.com/presentation/d/1WdNXNv6BRgBLsRHzxYlesLZewE-cCmvkBtzfGvXGkGI/edit?slide=id.g3aea72bb1c1_0_0#slide=id.g3aea72bb1c1_0_0;Slides|https://www.linkedin.com/feed/update/urn:li:activity:7405411102974451712/;LinkedIn Post|/ai/webdev/programming/one-codebase-many-products-playbook/;Blog Post"
+                abstract="Shared our journey with The 'One Codebase, Many Products' Playbook at AnalytiqHub.com, turning one framework into a powerhouse for AI products. From building DocRouter.AI in 3 months to launching SigAgent.AI in 3 weeks, and customized AI portals for clients – it's all about slashing dev time with 90%+ reuse. Core Playbook Steps: Build Shared Foundations (React UI, FastAPI backend, MongoDB storage, and Claude Agent for workflows), Integrate Smartly (LiteLLM for LLMs and Stripe for seamless billing), and Scale with Ease (open-core for community, closed forks for clients)."
+            %}
+
+            {% include talk-card.html 
                 title="SigAgent.AI - Tracing Claude Agents"
                 speaker="Andrei Radulescu-Banu"
                 date="Nov 17, 2025"
@@ -28,15 +40,6 @@ permalink: /talks/
             %}
 
             {% include talk-card.html 
-                title="SigAgent.AI - Tracing Claude Agents"
-                speaker="Andrei Radulescu-Banu"
-                date="Nov 17, 2025"
-                event="AI Tinkerers"
-                event_url="https://boston.aitinkerers.org/"
-                logos="/assets/images/aitinkerers-1.png"
-                image="/assets/images/sigagent_ai_tinkerers_talk.png"
-                links="https://boston.aitinkerers.org/p/ai-tinkerers-boston-meetup-november-2025;Event Details|https://www.linkedin.com/feed/update/urn:li:activity:7395834753372876800/;LinkedIn Post"
-                abstract="AI agents have become powerful and reliable, but you need to build them right. With 50% of new agents now built with Claude Code, the ecosystem has opened up for integration with MCP, marketplaces, plugins, and SKILLS.md. What's missing? AI Agent Evaluation for debugging during development, and for guardrails and monetization during deployment. SigAgent.AI specializes in tracing Claude agents using Open Telemetry and step-by-step, hook-level monitoring. We covered how to build Claude Agents with SigAgent.AI traceability, what works and what doesn't with MCP tools, CLAUDE.md, SKILLS.md and MCP-as-code, and how to stand up agent infrastructure for value-based and usage-based pricing."
                 title="How To Integrate Stripe Into Your AI Application"
                 speaker="Andrei Radulescu-Banu"
                 date="Oct 24, 2025"

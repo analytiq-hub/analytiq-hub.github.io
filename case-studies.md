@@ -64,6 +64,11 @@ permalink: /case-studies/
                 title="Lab Informatics Support That Accelerates Resolution" 
                 description="How we built an in-product AI agent that significantly reduced support query times and enabled scalable knowledge access for global lab teams" 
                 url="/case-studies/starlims-chat/" %}
+            
+            {% include case-study-card.html 
+                title="AI Book Companion - Principle-Based Management at Scale" 
+                description="How we built a multi-agent AI companion that brings Principle-Based Management to life for book readers and Koch Industries employees alike" 
+                url="/case-studies/koch-ai-book-companion/" %}
             </div>
         </main>
     </div>

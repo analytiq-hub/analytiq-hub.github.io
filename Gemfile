@@ -3,7 +3,7 @@
 source "https://rubygems.org"
 
 # Analytiq Pages Theme
-gem "analytiq-pages-theme", git: "https://github.com/analytiq-hub/analytiq-pages-theme", tag: "v1.0.1"
+gem "analytiq-pages-theme", git: "https://github.com/analytiq-hub/analytiq-pages-theme", tag: "v1.0.2"
 #gem "analytiq-pages-theme", path: "/Users/andrei/build/analytiq/analytiq-pages-theme"
 
 # Use GitHub Pages compatible Jekyll version

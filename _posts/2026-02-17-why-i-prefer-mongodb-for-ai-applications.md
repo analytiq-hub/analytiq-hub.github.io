@@ -15,6 +15,15 @@ I use MongoDB as the primary database for AI-powered products like [DocRouter.AI
 
 Roughly **90% of the backend is shared**. Both use the same Python package, `analytiq_data`: MongoDB client, migrations, queue layer, auth, and app startup. The same MongoDB database layout, indices, and migration history apply to both. Product-specific code lives in routes and frontends; the data layer is common.
 
+<div data-excalidraw="/assets/excalidraw/mongodb_one_backend_two_products.excalidraw" class="excalidraw-container">
+  <div class="loading-placeholder">Loading diagram...</div>
+</div>
+<div style="text-align: center; margin-top: 1rem;">
+  <a href="/excalidraw-edit?file=/assets/excalidraw/mongodb_one_backend_two_products.excalidraw" target="_blank" style="color: #2563eb; text-decoration: none; font-weight: 500;">
+    📝 Edit in Excalidraw
+  </a>
+</div>
+
 ## Strict Schema via Discipline: Migrations as "Schema"
 
 MongoDB doesn't enforce a schema. I still want **predictable structure and safe upgrades**, so we enforce it in code and process:
@@ -80,6 +89,15 @@ For **self-hosted Community Edition**, vector search requires **MongoDB 8.2+** w
 
 We implement **knowledge bases** in the shared backend using MongoDB's vector search, with three key pieces: an indexing pipeline, a search pipeline, and a reconciliation service.
 
+<div data-excalidraw="/assets/excalidraw/mongodb_knowledge_base_flow.excalidraw" class="excalidraw-container">
+  <div class="loading-placeholder">Loading diagram...</div>
+</div>
+<div style="text-align: center; margin-top: 1rem;">
+  <a href="/excalidraw-edit?file=/assets/excalidraw/mongodb_knowledge_base_flow.excalidraw" target="_blank" style="color: #2563eb; text-decoration: none; font-weight: 500;">
+    📝 Edit in Excalidraw
+  </a>
+</div>
+
 ### Indexing: Blue-Green Atomic Swap
 
 Each knowledge base gets its own vector collection (`kb_vectors_<kb_id>`). When a document is indexed, we chunk the text (via [Chonkie](https://github.com/chonkie-ai/chonkie): token/sentence/recursive chunkers), generate embeddings via LiteLLM, and then atomically swap old vectors for new ones inside a MongoDB transaction:
@@ -109,6 +127,15 @@ async with await client.start_session() as session:
 
 This blue-green pattern means a document is never in a half-indexed state: either all its new vectors are visible, or the old ones remain.
 
+<div data-excalidraw="/assets/excalidraw/mongodb_blue_green_indexing.excalidraw" class="excalidraw-container">
+  <div class="loading-placeholder">Loading diagram...</div>
+</div>
+<div style="text-align: center; margin-top: 1rem;">
+  <a href="/excalidraw-edit?file=/assets/excalidraw/mongodb_blue_green_indexing.excalidraw" target="_blank" style="color: #2563eb; text-decoration: none; font-weight: 500;">
+    📝 Edit in Excalidraw
+  </a>
+</div>
+
 ### Embedding Cache
 
 Embeddings are cached in a global `embedding_cache` collection keyed by `(SHA-256 chunk hash, embedding model)`. When the same text chunk appears in multiple KBs (or is re-indexed after an edit), we skip the API call and reuse the cached vector. This saves both cost and latency—especially when re-indexing a large KB after a configuration change.
@@ -126,6 +153,31 @@ Documents and KBs can drift: a document's tags change, a document is deleted, or
 - **Orphaned vectors:** vectors without a corresponding `document_index` entry → deleted.
 
 Reconciliation uses a **distributed lock** (atomic `find_one_and_update` with a 10-minute TTL) so only one worker reconciles a given KB at a time. It processes documents in batches of 100 to keep memory bounded, and supports **dry-run mode** for auditing without side effects.
+
+<style>
+.excalidraw-container {
+  width: 100%;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background: white;
+  display: block;
+  margin: 2rem 0;
+  min-height: 400px;
+}
+.excalidraw-container svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+}
+.loading-placeholder {
+  padding: 2rem;
+  text-align: center;
+  color: #666;
+}
+</style>
+<script type="module" src="/assets/js/excalidraw/render-excalidraw.js"></script>
 
 ---
 

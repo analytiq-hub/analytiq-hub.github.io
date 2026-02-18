@@ -127,6 +127,8 @@ db.system.profile.find({ nReturned: { $gt: 1000 } }).sort({ ts: -1 }).limit(20)
 
 Level 2 profiling captures everything but has I/O cost, so we use it in short bursts or staging. Level 1 (slow only) is cheaper and still surfaces most heavy queries.
 
+If you prefer GUIs over shell tools, both **MongoDB Compass** and the **Atlas Performance Advisor** surface similar slow-query/index recommendations in a more visual way, which is often easier when you're just getting started tuning a workload.
+
 With schema and indices in place, here's how we run it.
 
 ## Dev/Prod Setup and Vector Search
@@ -152,7 +154,7 @@ We implement **knowledge bases** in the shared backend using MongoDB's vector se
 
 ### Indexing: Blue-Green Atomic Swap
 
-Each knowledge base gets its own vector collection (`kb_vectors_<kb_id>`). When a document is indexed, we chunk the text (via [Chonkie](https://github.com/chonkie-ai/chonkie): token/sentence/recursive chunkers), generate embeddings via LiteLLM, and then atomically swap old vectors for new ones inside a MongoDB transaction:
+Each knowledge base gets its own vector collection (`kb_vectors_<kb_id>`). When a document is indexed, we chunk the text (via [Chonkie](https://github.com/chonkie-ai/chonkie), a small library for token/sentence/recursive text chunking), generate embeddings via [LiteLLM](https://github.com/BerriAI/litellm), a lightweight multi-provider LLM/embedding client, and then atomically swap old vectors for new ones inside a MongoDB transaction:
 
 ```python
 async with await client.start_session() as session:

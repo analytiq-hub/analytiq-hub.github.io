@@ -36,6 +36,11 @@ In my case, the workloads are heavily document- and log-centric, so the ergonomi
         <td class="px-4 py-2 align-top">Requires extensions or external tooling (e.g. Citus) and more tuning when pushing JSONB-heavy workloads.</td>
       </tr>
       <tr class="odd:bg-white even:bg-gray-50">
+        <td class="px-4 py-2 align-top">Consistency model</td>
+        <td class="px-4 py-2 align-top">Tunable; we use majority writes and typically read from secondaries, so most reads are eventually consistent.</td>
+        <td class="px-4 py-2 align-top">Strong ACID semantics with primary reads by default; great when you need strict guarantees across transactions.</td>
+      </tr>
+      <tr class="odd:bg-white even:bg-gray-50">
         <td class="px-4 py-2 align-top">Vector search</td>
         <td class="px-4 py-2 align-top">Native <code>$vectorSearch</code> in MongoDB 8.2+/Atlas.</td>
         <td class="px-4 py-2 align-top">Via <code>pgvector</code>, which has mature support.</td>

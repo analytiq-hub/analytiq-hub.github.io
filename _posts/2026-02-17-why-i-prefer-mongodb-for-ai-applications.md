@@ -7,7 +7,7 @@ image: /assets/images/mongodb-ai-applications-splash.png
 categories: [tech, programming, ai, databases]
 ---
 
-I use MongoDB as the primary database for AI-powered products like [DocRouter.AI](https://docrouter.ai) and [SigAgent.AI](https://sigagent.ai). This post explains how it's implemented—migrations, vector search, and knowledge bases—and why I prefer it over alternatives like Postgres for document-centric, JSON-heavy AI workloads where horizontal scaling matters.
+I use MongoDB as the primary database for AI-powered products like [DocRouter.AI](https://docrouter.ai) and [SigAgent.AI](https://sigagent.ai). This post explains how it's implemented—migrations, vector search, and knowledge bases—and why I prefer it over alternatives like Postgres for document-centric, JSON-heavy AI workloads. I want to store a very large number of documents (DocRouter) or logs (SigAgent) without spending much time tuning the database for horizontal scaling; MongoDB fits that need well.
 
 ## DocRouter and SigAgent: One Backend, Two Products
 
@@ -21,7 +21,7 @@ MongoDB doesn't enforce a schema. I still want **predictable structure and safe 
 
 - **Consistent document shape per collection.** We use a fixed set of field names and types in application code (and in TypeScript/Pydantic where applicable). In practice, each collection behaves like a table with a known "schema."
 - **Every change goes through migrations.** Renaming fields, adding/removing fields, splitting or renaming collections—all of it is done in versioned migration classes with `up()` and `down()`. The current schema version is stored in a `migrations` collection; on startup we run `run_migrations(analytiq_client)` and bring the DB to the latest version.
-- **Element types as schema.** We treat document fields as if they were typed: e.g. `schema_id`, `prompt_version`, `organization_id` are always present where we expect them. New code assumes the post-migration shape. So we get **the same kind of safety as Postgres** (known structure, no surprise shapes) while staying in a document model—as long as we're disciplined and never bypass migrations.
+- **Element types as schema.** We treat document fields as if they were typed: e.g. `schema_id`, `prompt_version`, `organization_id` are always present where we expect them. New code assumes the post-migration shape. So we get **comparable safety to Postgres** (known structure, no surprise shapes) while staying in a document model—as long as we're disciplined and never bypass migrations.
 
 So: schema is "enforced" by convention and migrations, not by the database. That keeps development fast without giving up control.
 
@@ -65,6 +65,8 @@ db.system.profile.find({ nReturned: { $gt: 1000 } }).sort({ ts: -1 }).limit(20)
 ```
 
 Level 2 profiling captures everything but has I/O cost, so we use it in short bursts or staging. Level 1 (slow only) is cheaper and still surfaces most heavy queries.
+
+With schema and indices in place, here's how we run it.
 
 ## Dev/Prod Setup and Vector Search
 

@@ -15,6 +15,45 @@ Postgres with **jsonb** can model the same document-style records and even integ
 
 In my case, the workloads are heavily document- and log-centric, so the ergonomics and scaling model of MongoDB outweigh the benefits of staying inside the relational/Postgres ecosystem.
 
+<div class="mt-6 overflow-x-auto">
+  <table class="min-w-full border border-gray-200 text-sm text-left">
+    <thead class="bg-gray-50">
+      <tr>
+        <th class="px-4 py-2 font-semibold text-gray-700 border-b border-gray-200">Aspect</th>
+        <th class="px-4 py-2 font-semibold text-gray-700 border-b border-gray-200">MongoDB Approach</th>
+        <th class="px-4 py-2 font-semibold text-gray-700 border-b border-gray-200">Postgres Alternative</th>
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-gray-100">
+      <tr class="odd:bg-white even:bg-gray-50">
+        <td class="px-4 py-2 align-top">Schema flexibility</td>
+        <td class="px-4 py-2 align-top">Evolving via migrations; no enforcement from the DB, but disciplined application code keeps documents consistent.</td>
+        <td class="px-4 py-2 align-top">Rigid but enforceable with DDL; great for stable relations, heavier for fast-changing AI schemas.</td>
+      </tr>
+      <tr class="odd:bg-white even:bg-gray-50">
+        <td class="px-4 py-2 align-top">Scaling</td>
+        <td class="px-4 py-2 align-top">Horizontal scaling and sharding are built-in; easy to grow with large document/log volumes.</td>
+        <td class="px-4 py-2 align-top">Requires extensions or external tooling (e.g. Citus) and more tuning when pushing JSONB-heavy workloads.</td>
+      </tr>
+      <tr class="odd:bg-white even:bg-gray-50">
+        <td class="px-4 py-2 align-top">Vector search</td>
+        <td class="px-4 py-2 align-top">Native <code>$vectorSearch</code> in MongoDB 8.2+/Atlas.</td>
+        <td class="px-4 py-2 align-top">Via <code>pgvector</code>, which has mature support.</td>
+      </tr>
+      <tr class="odd:bg-white even:bg-gray-50">
+        <td class="px-4 py-2 align-top">Joins &amp; relations</td>
+        <td class="px-4 py-2 align-top">Limited</td>
+        <td class="px-4 py-2 align-top">Strong</td>
+      </tr>
+      <tr class="odd:bg-white even:bg-gray-50">
+        <td class="px-4 py-2 align-top">Dev speed</td>
+        <td class="px-4 py-2 align-top">Quick iterations on JSON schemas and migrations; fits rapid AI product experiments.</td>
+        <td class="px-4 py-2 align-top">Slower to evolve schemas cleanly; better when you already know the long-term relational shape.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 ## DocRouter and SigAgent: One Backend, Two Products
 
 **DocRouter.AI** is a smart document router: you upload documents, define schemas and prompts, and it extracts structured data (e.g. from invoices, medical records, forms) using LLMs. **SigAgent** is a Claude agent monitor with a different UX and product focus, but it's built on the same stack.

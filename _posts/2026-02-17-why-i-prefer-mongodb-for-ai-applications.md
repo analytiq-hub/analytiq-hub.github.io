@@ -9,6 +9,10 @@ categories: [tech, programming, ai, databases]
 
 I use MongoDB as the primary database for AI-powered products like [DocRouter.AI](https://docrouter.ai) and [SigAgent.AI](https://sigagent.ai). This post explains how it's implemented—migrations, vector search, and knowledge bases—and why I prefer it over alternatives like Postgres for document-centric, JSON-heavy AI workloads. I want to store a very large number of documents (DocRouter) or logs (SigAgent) without spending much time tuning the database for horizontal scaling; MongoDB fits that need well.
 
+## Brief trade-offs vs Postgres
+
+Postgres with `jsonb` can model the same document-style records and even integrate vector search via extensions, but it shines most when you need strong relational guarantees and complex joins around a relatively stable schema. MongoDB is a better fit when almost everything is a JSON document, the schema evolves quickly, and you care more about horizontal scaling and standing operations up quickly than about classic SQL features. In my case, the workloads are heavily document- and log-centric, so the ergonomics and scaling model of MongoDB outweigh the benefits of staying inside the relational/Postgres ecosystem.
+
 ## DocRouter and SigAgent: One Backend, Two Products
 
 **DocRouter.AI** is a smart document router: you upload documents, define schemas and prompts, and it extracts structured data (e.g. from invoices, medical records, forms) using LLMs. **SigAgent** is a Claude agent monitor with a different UX and product focus, but it's built on the same stack.

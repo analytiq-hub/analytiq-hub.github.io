@@ -19,7 +19,7 @@ In my case, the workloads are heavily document- and log-centric, so the ergonomi
 
 **DocRouter.AI** is a smart document router: you upload documents, define schemas and prompts, and it extracts structured data (e.g. from invoices, medical records, forms) using LLMs. **SigAgent** is a Claude agent monitor with a different UX and product focus, but it's built on the same stack.
 
-Roughly **90% of the backend is shared**. Both use the same Python package, `analytiq_data`: MongoDB client, migrations, queue layer, auth, and app startup. The same MongoDB database layout, indices, and migration history apply to both. Product-specific code lives in routes and frontends; the data layer is common.
+Roughly **90% of the backend is shared**. Both use the same Python package, [analytiq_data](https://github.com/analytiq-hub/doc-router/tree/main/packages/python/analytiq_data): MongoDB client, migrations, queue layer, auth, and app startup. The same MongoDB database layout, indices, and migration history apply to both. Product-specific code lives in routes and frontends; the data layer is common.
 
 <div data-excalidraw="/assets/excalidraw/mongodb_one_backend_two_products.excalidraw" class="excalidraw-container">
   <div class="loading-placeholder">Loading diagram...</div>
@@ -44,7 +44,7 @@ So: schema is "enforced" by convention and migrations, not by the database. That
 
 ### Migrations
 
-Migrations live in [analytiq_data/migrations/migration.py](https://github.com/analytiq-hub/doc-router/blob/main/packages/python/analytiq_data/migrations/migration.py). Each migration is a class with:
+Migrations live in [migration.py](https://github.com/analytiq-hub/doc-router/blob/main/packages/python/analytiq_data/migrations/migration.py). Each migration is a class with:
 
 - `description`: short human-readable summary
 - `up(db)`: apply the change (e.g. rename field, backfill, add index)

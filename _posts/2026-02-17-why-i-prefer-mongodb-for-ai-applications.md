@@ -59,6 +59,8 @@ In my case, the workloads are heavily document- and log-centric, so the ergonomi
   </table>
 </div>
 
+It's also totally reasonable to split responsibilities: e.g. **Postgres for relational metadata**, a dedicated vector store like **Pinecone/Weaviate/Qdrant** for embeddings, or **Redis** as an embedding cache in front of another database. For [DocRouter.AI](https://docrouter.ai) and [SigAgent.AI](https://sigagent.ai), I'm happy to trade some theoretical optimality for a **single operational datastore** (MongoDB handling documents, logs, and vectors) until scale or workload complexity justifies introducing extra systems.
+
 ## DocRouter and SigAgent: One Backend, Two Products
 
 **DocRouter.AI** is a smart document router: you upload documents, define schemas and prompts, and it extracts structured data (e.g. from invoices, medical records, forms) using LLMs. **SigAgent** is a Claude agent monitor with a different UX and product focus, but it's built on the same stack.

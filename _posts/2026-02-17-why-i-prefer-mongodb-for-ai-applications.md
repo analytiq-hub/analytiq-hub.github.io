@@ -11,7 +11,9 @@ I use MongoDB as the primary database for AI-powered products like [DocRouter.AI
 
 ## Brief trade-offs vs Postgres
 
-Postgres with `jsonb` can model the same document-style records and even integrate vector search via extensions, but it shines most when you need strong relational guarantees and complex joins around a relatively stable schema. MongoDB is a better fit when almost everything is a JSON document, the schema evolves quickly, and you care more about horizontal scaling and standing operations up quickly than about classic SQL features. In my case, the workloads are heavily document- and log-centric, so the ergonomics and scaling model of MongoDB outweigh the benefits of staying inside the relational/Postgres ecosystem.
+Postgres with **jsonb** can model the same document-style records and even integrate vector search via extensions, but it shines most when you need **strong relational guarantees** and **complex joins** around a relatively **stable schema**. MongoDB is a better fit when **almost everything is a JSON document**, the schema **evolves quickly**, and you care more about **horizontal scaling** and **quick turnaround** than about classic SQL features. 
+
+In my case, the workloads are heavily document- and log-centric, so the ergonomics and scaling model of MongoDB outweigh the benefits of staying inside the relational/Postgres ecosystem.
 
 ## DocRouter and SigAgent: One Backend, Two Products
 

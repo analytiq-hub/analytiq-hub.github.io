@@ -10,6 +10,10 @@ show_excerpts: false # set to true to show excerpts on the homepage
 permalink: pretty
 baseurl: ""
 
+# Logo (displayed in header next to site title)
+logo: /assets/images/analytiq_hub_logo_40.png
+logo_2x: /assets/images/analytiq_hub_logo_80.png
+
 # Calendly integration
 calendly_url: "https://calendly.com/analytiqhub"
 

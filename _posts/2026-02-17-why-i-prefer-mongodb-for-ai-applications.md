@@ -88,6 +88,12 @@ So: schema is "enforced" by convention and migrations, not by the database. That
 
 ## How Migrations and Indices Are Implemented
 
+At a high level:
+
+- **Migrations** are versioned Python classes with `up()`/`down()` methods that evolve collections in lockstep with the code.
+- **Indices** are either created inside migrations (long-term, repeatable) or via a small helper at runtime for per-module needs.
+- **Profiling tools** (Atlas Query Insights, profiler, Compass/Performance Advisor) surface slow queries that suggest new compound indexes.
+
 ### Migrations
 
 Migrations live in [migration.py](https://github.com/analytiq-hub/doc-router/blob/main/packages/python/analytiq_data/migrations/migration.py). Each migration is a class with:
@@ -120,9 +126,19 @@ Example index patterns:
 
 To find candidates for new indices, we use **Atlas Query Insights** (filter by operations returning >1,000 documents, then add a compound index matching the filter and sort) or, on **Community Edition**, enable the database profiler and filter `system.profile` by `nReturned`:
 
-```javascript
-db.setProfilingLevel(1, { slowms: 100 })
-db.system.profile.find({ nReturned: { $gt: 1000 } }).sort({ ts: -1 }).limit(20)
+```python
+from pymongo import MongoClient
+
+client = MongoClient(MONGODB_URI)
+db = client["your_db_name"]
+
+# Enable profiling of slow queries only
+db.command("profile", 1, slowms=100)
+
+for doc in db["system.profile"].find(
+    {"nReturned": {"$gt": 1000}}
+).sort("ts", -1).limit(20):
+    print(doc["ns"], doc["millis"], doc.get("command"))
 ```
 
 Level 2 profiling captures everything but has I/O cost, so we use it in short bursts or staging. Level 1 (slow only) is cheaper and still surfaces most heavy queries.
@@ -132,6 +148,12 @@ If you prefer GUIs over shell tools, both **MongoDB Compass** and the **Atlas Pe
 With schema and indices in place, here's how we run it.
 
 ## Dev/Prod Setup and Vector Search
+
+Quickly, the environments look like this:
+
+- **Local:** MongoDB running on `localhost` or via the Atlas Local Docker image (bundling `mongod` + `mongot`) for easy vector search testing.
+- **Production:** MongoDB Atlas or AWS DocumentDB, configured for majority writes and read scaling.
+- **Self-hosted:** MongoDB 8.2+ with `mongot` in a replica set, using the same `createSearchIndexes` / `$vectorSearch` APIs.
 
 For **local development**, `MONGODB_URI` defaults to `mongodb://localhost:27017`. For vector search, we use the **MongoDB Atlas Local** Docker image (`mongodb/mongodb-atlas-local:latest`), which bundles `mongod` and **mongot** (the search/vector process) in one container.
 

@@ -126,19 +126,9 @@ Example index patterns:
 
 To find candidates for new indices, we use **Atlas Query Insights** (filter by operations returning >1,000 documents, then add a compound index matching the filter and sort) or, on **Community Edition**, enable the database profiler and filter `system.profile` by `nReturned`:
 
-```python
-from pymongo import MongoClient
-
-client = MongoClient(MONGODB_URI)
-db = client["your_db_name"]
-
-# Enable profiling of slow queries only
-db.command("profile", 1, slowms=100)
-
-for doc in db["system.profile"].find(
-    {"nReturned": {"$gt": 1000}}
-).sort("ts", -1).limit(20):
-    print(doc["ns"], doc["millis"], doc.get("command"))
+```javascript
+db.setProfilingLevel(1, { slowms: 100 })
+db.system.profile.find({ nReturned: { $gt: 1000 } }).sort({ ts: -1 }).limit(20)
 ```
 
 Level 2 profiling captures everything but has I/O cost, so we use it in short bursts or staging. Level 1 (slow only) is cheaper and still surfaces most heavy queries.

@@ -5,6 +5,7 @@ date: 2025-07-29
 author: Andrei Radulescu-Banu
 image: /assets/images/doc_router_cursor_claude.png
 categories: [ai, programming, tech, reviews]
+description: "How DocRouter.AI was built using Cursor and Claude for CSS and UI development: schema-driven document processing for regulated industries."
 ---
 
 DocRouter.AI transforms messy, multi-layout business documents into clean, structured data using large language models (LLMs) and schema-driven orchestration. We focus on regulated industries like insurance, healthcare, and supply chain, where precision is non-negotiable. It's a horizontal data layer application that plugs into vertical-specific apps, acting as an AI accelerator across sectors.

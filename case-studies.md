@@ -3,6 +3,7 @@ layout: default
 title: Success Stories
 subtitle: See how we've helped businesses transform their operations
 permalink: /case-studies/
+description: "Success stories: how Analytiq Hub delivered AI solutions for DME providers, insurance wholesalers, lab informatics, and supply chain operations."
 ---
 
 <!-- Header Section with Gray Background -->

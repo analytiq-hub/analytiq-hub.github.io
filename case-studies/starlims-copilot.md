@@ -1,8 +1,9 @@
 ---
 layout: case-study
-title: Lab Informatics Coding Copilot - AI-Powered Development Acceleration
+title: "AI Coding Copilot for Lab Informatics Development"
 subtitle: How we built an AI-powered coding copilot that significantly reduced form configuration time and enabled rapid customizations for global lab teams
 permalink: /case-studies/starlims-copilot/
+description: "AI coding copilot for Starlims LIMS: VSCode integration with Claude and MCP server reducing form configuration time for XFD, SSL, and JavaScript development."
 ---
 
 When Starlims, a leading laboratory information management system (LIMS) provider, aimed to streamline custom development for their products—spanning Life Sciences, Quality Manufacturing, Forensics, and Environmental Sciences—they collaborated with us to create an intelligent coding copilot. 

@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Announcing Analytiq Pages Theme: A Modern Jekyll Theme with Tailwind CSS"
+title: "Announcing Analytiq Pages: Jekyll Theme with Tailwind CSS"
 date: 2025-11-29
 author: Andrei Radulescu-Banu
 mathjax: false
 image: /assets/images/announcing_analytiq_pages_theme.png
 categories: [webdev, jekyll, tailwind, github-pages, theme, release]
+description: "Announcing Analytiq Pages Theme: a modern open-source Jekyll theme with Tailwind CSS, dropdown navigation, case studies, and GitHub Pages hosting."
 ---
 
 🎉 **We're excited to announce the release of Analytiq Pages Theme v0.1.6** - a modern, feature-rich Jekyll theme that transforms our Analytiq Pages approach into a reusable, professional-grade solution for building beautiful company websites.

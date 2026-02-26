@@ -3,6 +3,7 @@ layout: case-study
 title: AI Book Companion - Principle-Based Management at Scale
 subtitle: How we built a multi-agent AI companion that brings Principle-Based Management to life for book readers and Koch Industries employees alike
 permalink: /case-studies/koch-ai-book-companion/
+description: "Multi-agent AI book companion for Koch Industries: production-grade system with enterprise authentication, per-user memory, and observability for 100,000 users."
 ---
 
 When Koch Industries set out to bring Principle-Based Management (PBM) to a broad audience—both the reading public and Koch employees—they engaged Tribe AI to build an intelligent Book Companion. This AI-powered platform helps readers and employees alike learn, internalize, and apply PBM principles from the book by Chase and Charles Koch.

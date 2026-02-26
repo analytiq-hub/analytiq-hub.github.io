@@ -3,6 +3,7 @@ layout: case-study
 title: Supply Chain Automation That Delivers Results
 subtitle: AI-powered trade document processing reducing manual work from hours to minutes
 permalink: /case-studies/supply-chain/
+description: "Supply chain AI automation: intelligent processing of trade documents, bills of lading, and customs forms reducing manual work from hours to minutes."
 ---
 ## Overview
 

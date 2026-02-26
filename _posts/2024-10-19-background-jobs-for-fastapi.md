@@ -5,6 +5,7 @@ date: 2024-10-19
 author: Andrei Radulescu-Banu
 image: /assets/images/background-jobs-for-fastapi.png
 categories: [ai, programming, tech, reviews]
+description: "How to run background jobs in FastAPI for OCR, NER, and LLM workloads: architecture patterns, Celery integration, and async task management."
 ---
 
 I needed my FastAPI backend to spawn background jobs, for example, to run Optical Character Recognition (OCR), Named Entity Recognition (NER), or Large Language Model (LLM) orchestration. The FastAPI ran as an API service to a NextJS frontend React application.

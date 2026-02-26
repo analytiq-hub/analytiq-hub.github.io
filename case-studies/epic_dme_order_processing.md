@@ -3,6 +3,7 @@ layout: case-study
 title: Epic EHR Integration That Delivers ROI
 subtitle: Zero-touch Epic automation reducing processing time by 90% while ensuring 100% compliance
 permalink: /case-studies/epic_dme_order_processing/
+description: "Epic EHR integration for DME providers: zero-touch automation reducing CPAP order processing time by 90% with full Medicare compliance."
 ---
 
 ## The Challenge

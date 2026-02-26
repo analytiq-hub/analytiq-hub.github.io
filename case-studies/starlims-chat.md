@@ -3,6 +3,7 @@ layout: case-study
 title: Lab Informatics Support That Accelerates Resolution
 subtitle: How we built an in-product AI agent that significantly reduced support query times and enabled scalable knowledge access for global lab teams
 permalink: /case-studies/starlims-chat/
+description: "In-product AI chat agent for Starlims LIMS: significantly reduced support query resolution times and enabled scalable knowledge access for global lab teams."
 ---
 
 ## Overview

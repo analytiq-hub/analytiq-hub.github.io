@@ -2,6 +2,7 @@
 layout: page
 title: Partners
 permalink: /partners/
+description: "Strategic partnerships and collaborations powering Analytiq Hub's AI solutions for biotech, healthtech, and regulated industries."
 ---
 
 <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-4 md:py-12">

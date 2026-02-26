@@ -3,6 +3,7 @@ layout: case-study
 title: DocRouter.AI - Document Processing Platform
 subtitle: AI-powered document understanding for enterprise workflows
 permalink: /case-studies/docrouter-ai/
+description: "DocRouter.AI: AI-powered document processing delivering 90% time savings and 95% error reduction for insurance, healthcare, finance, and supply chain enterprises."
 ---
 
 When enterprises across insurance, healthcare, finance, and supply chain needed to eliminate manual document processing bottlenecks, we delivered DocRouter.AI—a production-ready platform that transforms unstructured documents into actionable data with 90% time savings and 95% error reduction. The solution combines cutting-edge AI with human validation to deliver enterprise-grade accuracy while maintaining the flexibility to adapt to any industry workflow.

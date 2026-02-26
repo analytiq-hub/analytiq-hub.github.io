@@ -3,6 +3,7 @@ layout: case-study
 title: Healthcare Automation That Delivers ROI
 subtitle: How we built a zero-to-ten DME automation platform that enabled 4x team growth and secured funding
 permalink: /case-studies/dme/
+description: "How Analytiq Hub built a zero-to-ten DME automation platform using AI, enabling 4x team growth, automated Medical Necessity Review, and Series A funding."
 ---
 
 ## Overview

@@ -3,6 +3,7 @@ layout: case-study
 title: Insurance Automation That Reduces Manual Work
 subtitle: AI-powered submission processing reducing manual work by 75%
 permalink: /case-studies/insurance_wholesaler/
+description: "AI-powered insurance submission processing: 75% reduction in manual work for a specialty wholesaler processing 7,000 annual ACORD form submissions."
 ---
 
 ## The Challenge

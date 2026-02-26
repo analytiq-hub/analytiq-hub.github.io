@@ -5,6 +5,7 @@ date: 2025-10-20 00:00:00 +0000
 author: "Andrei Radulescu-Banu & Randy Carlton"
 image: /assets/images/how_to_integrate_stripe.png
 categories: [tech, programming, ai, tutorials]
+description: "How DocRouter.AI integrated Stripe for SaaS billing: subscription management, webhooks, usage-based pricing, and key API design decisions."
 ---
 
 At [DocRouter.AI](http://docrouter.ai), we build an AI app for processing documents using LLMs. As our user base grew, we needed a reliable way to handle billing for self-serve customers. This post explains our Stripe integration, focusing on key design choices. We'll cover why we chose Stripe, how we keep things flexible, pricing decisions, APIs used, and more.

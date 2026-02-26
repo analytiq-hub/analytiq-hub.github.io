@@ -2,6 +2,7 @@
 layout: default
 title: "Talks - Analytiq Hub"
 permalink: /talks/
+description: "Speaking engagements and public presentations by Andrei Radulescu-Banu on AI, LLMs, document processing, and regulated industries."
 ---
 
 <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-4 md:py-12">

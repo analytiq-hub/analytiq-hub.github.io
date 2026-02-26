@@ -86,6 +86,46 @@
 </script>
 {%- endif -%}
 
+<!-- SiteNavigationElement — hints preferred sitelinks order to Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    {
+      "@type": "SiteNavigationElement",
+      "position": 1,
+      "name": "Technology",
+      "url": "{{ site.url }}/technology/"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "position": 2,
+      "name": "Success Stories",
+      "url": "{{ site.url }}/case-studies/"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "position": 3,
+      "name": "Talks",
+      "url": "{{ site.url }}/talks/"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "position": 4,
+      "name": "Blog",
+      "url": "{{ site.url }}/blog/"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "position": 5,
+      "name": "Contact",
+      "url": "{{ site.url }}/contact/"
+    }
+  ]
+}
+</script>
+
 {%- assign url_parts = page.url | split: '/' -%}
 {%- if url_parts.size > 2 -%}
 <!-- BreadcrumbList for nested pages -->

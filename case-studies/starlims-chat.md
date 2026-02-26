@@ -51,7 +51,7 @@ Our solution combines proven technologies to deliver reliable performance for la
 **Built for Regulated Lab Requirements**: Our architecture ensures security, compliance, and ease of maintenance:
 
 * **AWS Infrastructure**: ECS/EC2 for containerized chat servers, S3 for raw knowledge storage, and Terraform for IaC—providing HIPAA/GDPR compliance with reproducible deployments.
-* **MongoDB**: Flexible database for AI portal and evaluation traces, enabling quick iteration on chat performance.
+* [**MongoDB**](/tech/programming/ai/databases/why-i-prefer-mongodb-for-ai-applications/): Flexible database for AI portal and evaluation traces, enabling quick iteration on chat performance.
 * **Next.js & FastAPI**: High-performance chat server and eval interfaces, with TypeScript for type-safe development.
 * **Pinecone**: Serverless vector DB for semantic search, integrated via AWS Marketplace for seamless scaling.
 * **Airbyte**: Open-source ETL for Zendesk integration, with alternatives like Fivetran reviewed for future flexibility.

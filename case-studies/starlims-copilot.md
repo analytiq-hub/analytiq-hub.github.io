@@ -8,7 +8,7 @@ description: "AI coding copilot for Starlims LIMS: VSCode integration with Claud
 
 When Starlims, a leading laboratory information management system (LIMS) provider, aimed to streamline custom development for their products—spanning Life Sciences, Quality Manufacturing, Forensics, and Environmental Sciences—they collaborated with us to create an intelligent coding copilot. 
 
-From initial concept, we collaborated as Tribe.AI architect contractors and delivered a complete MVP integrated into VSCode, leveraging Claude Code and a custom Multi-Chat Protocol (MCP) server for automated code generation in proprietary languages like XFD forms, SSL scripts, and JavaScript. 
+From initial concept, we collaborated as Tribe.AI architect contractors and delivered a complete MVP integrated into VSCode, leveraging [Claude Code](/ai/programming/tech/reviews/claude-code-vs-cursor-july-25/) and a custom Multi-Chat Protocol (MCP) server for automated code generation in proprietary languages like XFD forms, SSL scripts, and JavaScript. 
 
 The outcome? A powerful tool that not only cut development cycles but also equipped internal teams for iterative testing, setting the stage for enterprise rollout and advanced features like agentic workflows.
 
@@ -46,7 +46,7 @@ Our solution leverages robust technologies to support efficient lab development:
 
 - **AWS Infrastructure**: S3 for knowledge bases (SSL/XFD/JS), ECS for dev instances, and Terraform for IaC—providing with reproducible setups.
 - **Pinecone**: Vector database for RAG retrieval from indexed manuals and code snippets, with separate indices for XFD and SSL.
-- **MongoDB**: Manages AI portal data for evaluation traces and telemetry, supporting quick iterations.
+- [**MongoDB**](/tech/programming/ai/databases/why-i-prefer-mongodb-for-ai-applications/): Manages AI portal data for evaluation traces and telemetry, supporting quick iterations.
 - **Next.js & FastAPI**: Powers the AI portal for monitoring copilot usage, with TypeScript for robust development.
 - **VSCode Extension**: Custom bridge for form visualization, with APIs matching Starlims' SCM for check-in/out.
 

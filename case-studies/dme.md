@@ -53,7 +53,7 @@ Our solution leverages enterprise-proven technologies to deliver consistent perf
 **Built for Healthcare's Demanding Requirements**: Our architecture combines proven technologies to deliver the reliability, security, and compliance healthcare organizations demand:
 
 - **AWS S3**: Secure, HIPAA-compliant storage for all document types with 99.999% durability
-- **MongoDB**: Flexible data management for AI pipeline outputs, enabling rapid iteration and model improvements
+- [**MongoDB**](/tech/programming/ai/databases/why-i-prefer-mongodb-for-ai-applications/): Flexible data management for AI pipeline outputs, enabling rapid iteration and model improvements
 - **PostgreSQL**: Enterprise-grade transactional database ensuring data integrity for patient and order records
 - **Databricks**: Advanced analytics platform providing real-time business intelligence and operational insights
 - **Prefect**: Robust workflow orchestration enabling horizontal scaling without performance degradation

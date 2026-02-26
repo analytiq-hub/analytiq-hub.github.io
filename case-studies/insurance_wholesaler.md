@@ -8,11 +8,11 @@ description: "AI-powered insurance submission processing: 75% reduction in manua
 
 ## The Challenge
 
-A specialty insurance wholesaler processing 7,000 submissions annually faced critical operational bottlenecks: 50% of submissions were handwritten, requiring 10-15 staff members to manually extract data from ACORD forms, perform clearance searches in ALIS, and handle complex workflows. With 600 submissions per month and 7-14 hours of daily manual processing, the organization needed an intelligent solution that could automate data extraction while maintaining regulatory compliance and accuracy standards required in the insurance industry.
+A specialty insurance wholesaler processing 7,000 submissions annually faced critical operational bottlenecks: 50% of submissions were handwritten, requiring 10-15 staff members to manually extract data from ACORD forms, perform clearance searches in ALIS, and handle complex workflows. With 600 submissions per month and 7-14 hours of daily manual processing, the organization needed an intelligent solution that could automate data extraction while maintaining [regulatory compliance](/ai/programming/tech/reviews/engineering-with-guardrails-innovating-in-regulated-spaces/) and accuracy standards required in the insurance industry.
 
 ## The Solution
 
-We delivered DocRouter.AI, an intelligent document processing platform that automates insurance submission workflows while maintaining the human oversight required for regulatory compliance. The solution processes handwritten and typed ACORD forms using advanced OCR and LLM technology, automatically extracting structured data and integrating with ALIS systems—reducing manual processing time from hours to minutes while ensuring accuracy and compliance.
+We delivered [DocRouter.AI](/case-studies/docrouter-ai/), an intelligent document processing platform that automates insurance submission workflows while maintaining the human oversight required for regulatory compliance. The solution processes handwritten and typed ACORD forms using advanced OCR and LLM technology, automatically extracting structured data and integrating with ALIS systems—reducing manual processing time from hours to minutes while ensuring accuracy and compliance.
 
 ![Insurance Automation Platform]({{ '/assets/images/case-studies/insurance-wholesaler/insurance-wholesaler-hero.png' | relative_url }})
 *AI-powered insurance submission processing that automates ACORD form workflows with 75% efficiency gains*

@@ -8,7 +8,7 @@ description: "Multi-agent AI book companion for Koch Industries: production-grad
 
 When Koch Industries set out to bring Principle-Based Management (PBM) to a broad audience—both the reading public and Koch employees—they engaged Tribe AI to build an intelligent Book Companion. This AI-powered platform helps readers and employees alike learn, internalize, and apply PBM principles from the book by Chase and Charles Koch.
 
-Analytiq Hub served as a subcontractor on the engagement, providing hands-on technical leadership and architecture for a production-grade multi-agent system with enterprise authentication, per-user memory, observability, and a progressive disclosure UX—all built to handle 8,000 to 100,000 users per month.
+Analytiq Hub served as a subcontractor on the engagement, providing hands-on technical leadership and architecture for a production-grade [multi-agent system](/ai/programming/tutorials/how-to-train-your-ai-agent/) with enterprise authentication, per-user memory, observability, and a progressive disclosure UX—all built to handle 8,000 to 100,000 users per month.
 
 ## The Challenge
 

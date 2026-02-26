@@ -47,10 +47,10 @@ Our solution leverages enterprise-proven technologies to deliver consistent perf
 
 **Built for Enterprise Scale and Security**: Our architecture combines modern technologies with enterprise-grade reliability and compliance:
 
-- **MongoDB**: Flexible document storage with ACID compliance for user data, metadata, and processing results—enabling rapid schema evolution
+- [**MongoDB**](/tech/programming/ai/databases/why-i-prefer-mongodb-for-ai-applications/): Flexible document storage with ACID compliance for user data, metadata, and processing results—enabling rapid schema evolution
 - **AWS S3**: HIPAA/SOC2-compliant storage with 99.999% durability for document files and OCR outputs
 - **Next.js 14 + TypeScript**: Modern, responsive frontend with Material-UI providing enterprise UX standards and accessibility compliance
-- **FastAPI**: High-performance async backend with automatic OpenAPI documentation and built-in security features
+- [**FastAPI**](/ai/programming/tech/reviews/background-jobs-for-fastapi/): High-performance async backend with automatic OpenAPI documentation and built-in security features
 - **LiteLLM**: Multi-provider AI orchestration supporting 20+ LLM providers with intelligent failover and cost optimization
 - **Docker + Kubernetes**: Containerized deployment with auto-scaling, health checks, and zero-downtime updates
 - **AWS Lightsail**: Production-ready deployment with enterprise networking, SSL/TLS, and monitoring capabilities

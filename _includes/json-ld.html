@@ -1,0 +1,112 @@
+{% comment %}JSON-LD structured data for Analytiq Hub{% endcomment %}
+
+<!-- Organization + WebSite (all pages) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{ site.url }}/#organization",
+      "name": "Analytiq Hub",
+      "url": "{{ site.url }}",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ site.url }}/assets/images/analytiq_hub_logo_80.png"
+      },
+      "description": "Analytiq Hub provides custom AI solutions and expert guidance for biotech, healthtech, and regulated industries.",
+      "email": "andrei@analytiqhub.com",
+      "founder": {
+        "@type": "Person",
+        "name": "Andrei Radulescu-Banu"
+      },
+      "sameAs": [
+        "https://twitter.com/bitdribble",
+        "https://github.com/andrei-radulescu-banu",
+        "https://linkedin.com/in/andrei-radulescu-banu"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ site.url }}/#website",
+      "url": "{{ site.url }}",
+      "name": "{{ site.title }}",
+      "publisher": { "@id": "{{ site.url }}/#organization" }
+    }
+  ]
+}
+</script>
+
+{%- if page.layout == 'post' -%}
+<!-- BlogPosting schema for blog posts -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ page.description | default: site.description | jsonify }},
+  "url": "{{ page.url | absolute_url }}",
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ page.author | default: site.author.name }}"
+  },
+  "publisher": { "@id": "{{ site.url }}/#organization" },
+  {%- if page.image -%}
+  "image": "{{ page.image | absolute_url }}",
+  {%- endif -%}
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ page.url | absolute_url }}"
+  }
+}
+</script>
+{%- endif -%}
+
+{%- if page.layout == 'case-study' -%}
+<!-- Article schema for case studies -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ page.description | default: page.subtitle | default: site.description | jsonify }},
+  "url": "{{ page.url | absolute_url }}",
+  "author": { "@id": "{{ site.url }}/#organization" },
+  "publisher": { "@id": "{{ site.url }}/#organization" },
+  {%- if page.image -%}
+  "image": "{{ page.image | absolute_url }}",
+  {%- endif -%}
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ page.url | absolute_url }}"
+  }
+}
+</script>
+{%- endif -%}
+
+{%- assign url_parts = page.url | split: '/' -%}
+{%- if url_parts.size > 2 -%}
+<!-- BreadcrumbList for nested pages -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "{{ site.url }}"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": {{ page.title | jsonify }},
+      "item": "{{ page.url | absolute_url }}"
+    }
+  ]
+}
+</script>
+{%- endif -%}

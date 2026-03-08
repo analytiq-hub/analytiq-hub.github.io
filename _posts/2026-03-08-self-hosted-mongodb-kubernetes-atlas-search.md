@@ -92,3 +92,7 @@ Provision this StorageClass (and the EBS CSI driver) via Terraform or your prefe
 | **EKS storage** | Use a `gp3` StorageClass with `ebs.csi.aws.com`; don't rely on the default `gp2` |
 
 We use this chart for [Doc Router](https://docrouter.ai) and other applications that need MongoDB with vector search. For the full Doc Router deployment story (Helm chart, workers, CI/CD, multi-cloud), see [Deploying Doc Router on Kubernetes]({% post_url 2026-03-07-deploying-doc-router-on-kubernetes %}).
+
+---
+
+*Andrei Radulescu-Banu is the founder of [DocRouter.AI](https://docrouter.ai) (document processing with LLMs) and [SigAgent.AI](https://sigagent.ai) (Claude Agent monitoring). His company [AnalytiqHub.com](https://analytiqhub.com) provides consulting services for cloud and AI engineering.*

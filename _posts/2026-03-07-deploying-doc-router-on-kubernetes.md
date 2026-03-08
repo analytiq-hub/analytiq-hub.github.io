@@ -266,3 +266,7 @@ The deploy scripts (`k8s-deploy.sh`, `build-push.sh`) accept an overlay name and
 - **On-premises distribution** — Helm chart and images are public on ghcr.io; self-hosted MongoDB is available via the [`mongodb-atlas-local`](https://github.com/analytiq-hub/analytiq-charts) chart (see [Self-Hosted MongoDB on Kubernetes with Atlas Search]({% post_url 2026-03-08-self-hosted-mongodb-kubernetes-atlas-search %})); documentation for a one-command on-prem install is the next step
 - **Offline license keys** — JWT-based licenses signed with a private key, verified against a public key baked into the image, for air-gapped installations
 - **Multi-cloud support** — Digital Ocean Kubernetes is now supported alongside EKS; Azure Kubernetes Service support is planned
+
+---
+
+*Andrei Radulescu-Banu is the founder of [DocRouter.AI](https://docrouter.ai) (document processing with LLMs) and [SigAgent.AI](https://sigagent.ai) (Claude Agent monitoring). His company [AnalytiqHub.com](https://analytiqhub.com) provides consulting services for cloud and AI engineering.*

@@ -146,3 +146,7 @@ The same chart that runs on EKS runs on Kind, with a different `values-kind.yaml
 | Local Docker | Kind (Kubernetes in Docker) |
 
 **Next:** [Kubernetes Packaging and Deployment: Kustomize, Helm, and GitOps]({% post_url 2026-03-06-kubernetes-packaging-helm-gitops %}) goes deeper into packaging manifests and GitOps with Flux.
+
+---
+
+*Andrei Radulescu-Banu is the founder of [DocRouter.AI](https://docrouter.ai) (document processing with LLMs) and [SigAgent.AI](https://sigagent.ai) (Claude Agent monitoring). His company [AnalytiqHub.com](https://analytiqhub.com) provides consulting services for cloud and AI engineering.*

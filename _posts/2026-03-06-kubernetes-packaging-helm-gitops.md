@@ -308,3 +308,7 @@ GitOps is the right choice for teams with multiple people deploying to shared cl
 A mature production setup typically uses all three: Kustomize or Helm for defining manifests, Flux or Argo CD for reconciling them, and a CI pipeline that produces the artifacts both consume.
 
 **Next:** [Deploying Doc Router on Kubernetes]({% post_url 2026-03-07-deploying-doc-router-on-kubernetes %}) walks through a real application deployment (Helm chart, workers, CI/CD, EKS and Digital Ocean). If you need in-cluster MongoDB with vector search, see [Self-Hosted MongoDB on Kubernetes with Atlas Search]({% post_url 2026-03-08-self-hosted-mongodb-kubernetes-atlas-search %}).
+
+---
+
+*Andrei Radulescu-Banu is the founder of [DocRouter.AI](https://docrouter.ai) (document processing with LLMs) and [SigAgent.AI](https://sigagent.ai) (Claude Agent monitoring). His company [AnalytiqHub.com](https://analytiqhub.com) provides consulting services for cloud and AI engineering.*

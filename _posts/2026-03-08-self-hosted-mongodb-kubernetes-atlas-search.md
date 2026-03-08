@@ -3,6 +3,7 @@ layout: post
 title: "Self-Hosted MongoDB on Kubernetes with Atlas Search (mongot)"
 date: 2026-03-08 00:00:00 +0000
 author: "Andrei Radulescu-Banu"
+image: /assets/images/self-hosted-mongodb-kubernetes-atlas-search-splash.png
 categories: [tech, kubernetes, devops, mongodb]
 description: "Run a production-grade MongoDB replica set with optional Atlas Search (vector and full-text) inside Kubernetes — for air-gapped, on-prem, or any environment where Atlas isn't an option."
 ---

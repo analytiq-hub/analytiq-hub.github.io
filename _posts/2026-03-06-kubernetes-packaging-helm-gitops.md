@@ -3,6 +3,7 @@ layout: post
 title: "Kubernetes Packaging and Deployment: Kustomize, Helm, and GitOps"
 date: 2026-03-06 00:00:00 +0000
 author: "Andrei Radulescu-Banu"
+image: /assets/images/kubernetes-packaging-helm-gitops-splash.png
 categories: [tech, kubernetes, devops]
 description: "The second part of the Kubernetes primer series: Kustomize, Helm, and GitOps with Flux — packaging manifests and letting the cluster manage itself."
 ---

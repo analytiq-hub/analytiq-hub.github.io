@@ -3,6 +3,7 @@ layout: post
 title: "Kubernetes for Docker Users: A Practical Primer"
 date: 2026-03-05 00:00:00 +0000
 author: "Andrei Radulescu-Banu"
+image: /assets/images/kubernetes-docker-users-primer-splash.png
 categories: [tech, kubernetes, devops]
 description: "If you've used Docker Compose, you already understand the core idea. Kubernetes takes that same idea and extends it to run across a cluster of machines, with built-in handling for failures, scaling, and upgrades."
 ---

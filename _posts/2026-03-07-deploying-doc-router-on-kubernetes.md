@@ -3,6 +3,7 @@ layout: post
 title: "Deploying Doc Router on Kubernetes: From Docker Compose to EKS and Digital Ocean"
 date: 2026-03-07 00:00:00 +0000
 author: "Andrei Radulescu-Banu"
+image: /assets/images/deploying-doc-router-kubernetes-splash.png
 categories: [tech, kubernetes, devops, docrouter]
 description: "Production-grade Kubernetes support for Doc Router: key decisions, Helm chart, worker merging, graceful shutdown, and multi-cloud deployment."
 ---

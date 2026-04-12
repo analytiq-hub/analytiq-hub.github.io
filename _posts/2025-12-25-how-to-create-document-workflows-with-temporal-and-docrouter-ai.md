@@ -1,10 +1,11 @@
 ---
 layout: post
-title: "How To Create Document Workflows With Temporal And DocRouter.AI"
+title: "Document Workflows with Temporal and DocRouter.AI"
 date: 2025-12-25 00:00:00 +0000
 author: "Andrei Radulescu-Banu"
 image: /assets/images/temporal_docrouter_workflows.svg
 categories: [tech, programming, ai, tutorials]
+description: "How to build multi-step document processing pipelines with Temporal and DocRouter.AI for handling 200+ page medical records and complex workflows."
 ---
 
 🚀 Just spent the last few days building a powerful multi-step document processing pipeline — and it handles 200+ page medical records like a champ!

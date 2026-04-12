@@ -3,6 +3,7 @@ layout: case-study
 title: Supply Chain Automation That Delivers Results
 subtitle: AI-powered trade document processing reducing manual work from hours to minutes
 permalink: /case-studies/supply-chain/
+description: "Supply chain AI automation: intelligent processing of trade documents, bills of lading, and customs forms reducing manual work from hours to minutes."
 ---
 ## Overview
 
@@ -48,7 +49,7 @@ Our supply chain automation platform delivers measurable business value through 
 Our solution leverages enterprise-proven technologies to deliver consistent performance across diverse document types and international operations:
 
 ### Intelligent Document Processing Pipeline {#intelligent-document-ingestion}
-**Universal Document Support**: Both systems utilize advanced **Optical Character Recognition (OCR)** and **Large Language Models (LLMs)** to process diverse document formats including:
+**Universal Document Support**: Both systems utilize advanced **Optical Character Recognition (OCR)** and [**Large Language Models (LLMs)**](/ai/programming/tutorials/how-to-train-your-ai-agent/) to process diverse document formats including:
 
 - **PDF documents** from various sources and formats—ensuring compatibility across different systems
 - **Scanned images** of physical documents—handling legacy documentation seamlessly

@@ -6,6 +6,7 @@ author: Andrei Radulescu-Banu
 mathjax: false
 image: /assets/images/analytiq_pages.png
 categories: [webdev, jekyll, tailwind, github-pages, company-website]
+description: "How to build and host your company website with Analytiq Pages: a modern Jekyll theme with Tailwind CSS on GitHub Pages, free and fast."
 ---
 
 Setting up a professional company website shouldn't require a team of developers or expensive hosting solutions. **Analytiq Pages** is our streamlined approach to building beautiful, fast company websites using GitHub Pages, Jekyll, and Tailwind CSS - completely free and with enterprise-grade reliability.

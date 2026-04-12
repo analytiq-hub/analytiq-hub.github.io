@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+description: "Meet Andrei Radulescu-Banu, founder of Analytiq Hub. Expert AI engineer building production AI systems for biotech, healthtech, and regulated industries."
 ---
 
 <div class="bg-gradient-to-br from-white to-blue-50 rounded-lg shadow-lg p-8">

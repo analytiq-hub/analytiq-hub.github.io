@@ -5,6 +5,7 @@ date: 2025-10-02
 author: Andrei Radulescu-Banu
 image: /assets/images/how_to_train_your_ai_agent.png
 categories: [ai, programming, tutorials]
+description: "Practical guide to training AI agents: knowledge bases, prompt engineering, fine-tuning, MCP servers, and evaluation for production AI systems."
 ---
 
 Developing an AI agent comes down to a number of intertwined yet distinct challenges:

@@ -3,11 +3,12 @@ layout: case-study
 title: Epic EHR Integration That Delivers ROI
 subtitle: Zero-touch Epic automation reducing processing time by 90% while ensuring 100% compliance
 permalink: /case-studies/epic_dme_order_processing/
+description: "Epic EHR integration for DME providers: zero-touch automation reducing CPAP order processing time by 90% with full Medicare compliance."
 ---
 
 ## The Challenge
 
-A leading Durable Medical Equipment (DME) provider serving major healthcare systems (Albany Med, St. Peters) faced a critical operational crisis: 50% of their CPAP orders originated from Epic EHR systems, but manual processing was expensive and error prone. Staff spent hours daily manually pulling orders from Epic's In Basket, searching for supporting documents (facesheets, sleep studies, office notes), and handling duplicates across multiple chart types—a process that was unsustainable as healthcare systems moved away from fax-based workflows. With Medicare compliance requirements demanding specific documentation sequences and real-time processing expectations, the manual approach created both financial losses and regulatory risks that threatened the business's ability to scale.
+A leading Durable Medical Equipment (DME) provider serving major healthcare systems (Albany Med, St. Peters) faced a critical operational crisis: 50% of their CPAP orders originated from Epic EHR systems, but manual processing was expensive and error prone. Staff spent hours daily manually pulling orders from Epic's In Basket, searching for supporting documents (facesheets, sleep studies, office notes), and handling duplicates across multiple chart types—a process that was unsustainable as healthcare systems moved away from fax-based workflows. With [Medicare compliance](/ai/programming/tech/reviews/engineering-with-guardrails-innovating-in-regulated-spaces/) requirements demanding specific documentation sequences and real-time processing expectations, the manual approach created both financial losses and regulatory risks that threatened the business's ability to scale.
 
 ![Epic EHR Integration]({{ 'assets/images/case-studies/epic-dme/epic-dme-hero.png' | relative_url }})
 *Zero-touch Epic automation platform that transforms manual order processing into intelligent workflows*
@@ -33,7 +34,7 @@ Our solution leverages enterprise-proven technologies to deliver consistent perf
 ### Real-Time Epic Integration Pipeline
 **Secure Authentication**: The system uses Selenium-based RPA to initiate Epic login, with AWS SES automatically handling 6-character MFA codes from Gmail—ensuring secure, unattended access while maintaining enterprise security standards.
 
-**Intelligent Data Extraction**: Once authenticated, the platform automatically scrapes CC'd patient lists and downloads all relevant files (facesheets, orders, notes, media, encounters) with intelligent caching in MongoDB—reducing processing time by 80% while ensuring complete data capture.
+**Intelligent Data Extraction**: Once authenticated, the platform automatically scrapes CC'd patient lists and downloads all relevant files (facesheets, orders, notes, media, encounters) with intelligent caching in [MongoDB](/tech/programming/ai/databases/why-i-prefer-mongodb-for-ai-applications/)—reducing processing time by 80% while ensuring complete data capture.
 
 **Enterprise-Grade Processing**: Downloaded files flow through SQS queues to Databricks jobs for reassembly, OCR processing, and LLM parsing—delivering structured data with 99%+ accuracy while maintaining full audit trails for compliance.
 

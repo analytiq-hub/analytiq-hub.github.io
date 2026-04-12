@@ -3,12 +3,15 @@ author:
   name: Andrei Radulescu-Banu
   email: "andrei@analytiqhub.com"
 description: > # this means to ignore newlines until "show_excerpts:"
-  Analytiq Hub provides custom AI solutions and expert guidance 
+  Analytiq Hub provides custom AI solutions and expert guidance
   for biotech and healthtech companies.
+
+google_analytics: "G-S50PF58G08"
 
 show_excerpts: false # set to true to show excerpts on the homepage
 permalink: pretty
 baseurl: ""
+url: "https://analytiqhub.com"
 
 # Logo (displayed in header next to site title)
 logo: /assets/images/analytiq_hub_logo_40.png
@@ -92,6 +95,8 @@ site_map:
     links:
       - title: "About"
         url: "/about"
+      - title: "Privacy Policy"
+        url: "/privacy"
   - title: "Resources"
     links:
       - title: "Blog"
@@ -124,12 +129,28 @@ pagination:
 plugins:
  - jekyll-feed
  - jekyll-seo-tag
+ - jekyll-sitemap
  - jekyll-pdf-embed # Per example at https://github.com/MihajloNesic/minimal-mistakes-pdf-example/
  - jekyll-paginate-v2
 
-
-
 future: true
 
+# Default OG/social image for pages that don't set their own image front matter
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/images/analytiq_hub_front_page.png
+
+# Twitter card type - summary_large_image gives a large banner preview
+twitter:
+  username: bitdribble
+  card: summary_large_image
+
+# Google Search Console verification
+# Get this from https://search.google.com/search-console → Settings → Ownership verification → HTML tag
+# Paste only the content="...?" value
+# google_site_verification: ""
+
 # GitHub repository configuration
-repository:  analytiq-hub/analytiq-hub.github.io 
+repository:  analytiq-hub/analytiq-hub.github.io

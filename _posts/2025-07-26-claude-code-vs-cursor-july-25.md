@@ -5,6 +5,7 @@ date: 2025-07-26
 author: Andrei Radulescu-Banu
 image: /assets/images/claude_code_vs_cursor.png
 categories: [ai, programming, tech, reviews]
+description: "Side-by-side comparison of Claude Code vs Cursor AI coding assistants in July 2025: speed, context window, code quality, and real-world workflow differences."
 ---
 
 Today, I ran Anthropic [Claude Code](https://claude.ai/code) side by side with [Cursor](https://cursor.sh). Here is my take:

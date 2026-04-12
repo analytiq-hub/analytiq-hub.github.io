@@ -1,10 +1,11 @@
 ---
 layout: post
-title: "Navigating Compliance in Startups: A Guide for Regulated Industries"
+title: "Navigating Compliance in Regulated Industry Startups"
 date: 2025-09-10
 author: Andrei Radulescu-Banu
 image: /assets/images/engineering_with_guardrails.png
 categories: [ai, programming, tech, reviews]
+description: "How startups navigate compliance in regulated industries: healthcare, fintech, AI, and consumer hardware compliance frameworks and engineering guardrails."
 ---
 
 In the dynamic world of startups, especially those operating in heavily regulated sectors like healthcare, fintech, AI, and consumer hardware, compliance isn't just a checkbox—it's a foundational element that safeguards innovation, protects users, and unlocks growth opportunities. 

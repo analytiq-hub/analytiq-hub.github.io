@@ -6,6 +6,7 @@ author: Andrei Radulescu-Banu
 mathjax: true
 image: /assets/images/jekyll-tailwind.png
 categories: [webdev, jekyll, tailwind]
+description: "Step-by-step guide to migrating a Jekyll Minima theme to Tailwind CSS: layout changes, component patterns, and modern responsive design."
 ---
 
 I can't believe it. Claude Code was able to update my Jekyll-based site [bitdribble.github.io](https://bitdribble.github.io) to use Tailwind pretty much with no intervention. The transformation from the old, less flexible Minima theme to a modern Tailwind-powered setup was vibe coded with a few light touches.

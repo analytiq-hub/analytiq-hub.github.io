@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Analytiq Hub - Data+AI Solutions"
+description: "Custom AI solutions and expert guidance for biotech, healthtech, and regulated industries. From zero to scale with proven results."
 ---
 
 <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-4 md:py-12">

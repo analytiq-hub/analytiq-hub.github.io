@@ -2,6 +2,7 @@
 layout: default
 title: "Technology - Analytiq Hub"
 permalink: /technology/
+description: "Our AI technology stack: LLMs, document processing, cloud platforms, and workflow automation for biotech, healthtech, and regulated industries."
 ---
 <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-4 md:py-12">
     <main>

@@ -5,6 +5,7 @@ date: 2024-10-19
 author: Andrei Radulescu-Banu
 image: /assets/images/how-to-make-a-self-driving-car.png
 categories: [ai, programming, tech, reviews]
+description: "Notes on building self-driving cars: a16z survey analysis covering sensors, ML pipelines, and slides from the AI Camp January 2024 talk."
 ---
 
 *Notes on an a16z survey of self-driving cars, and slides from my AI Camp Jan 2024 Talk*

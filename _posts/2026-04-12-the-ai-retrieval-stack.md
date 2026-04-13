@@ -301,7 +301,7 @@ BM25 ranks documents for a **keyword** query. It rewards:
 * multiple mentions, but with diminishing returns
 * shorter, more focused documents over long noisy ones
 
-For each query term $t$ in document $d$:
+For each query $q$ and document $d$:
 
 $$
 \text{BM25}(q,d) =
@@ -312,7 +312,7 @@ $$
 {f(t,d) + k_1\left(1 - b + b\frac{\lvert d \rvert}{\text{avgdl}}\right)}
 $$
 
-where $N$ is corpus size, $n_t$ is the number of documents containing $t$, $f(t,d)$ is term frequency, $\lvert d \rvert$ is document length, $\text{avgdl}$ is average document length across the corpus, and $k_1 \approx 1.2$–$2.0$ (term-frequency saturation) and $b \approx 0.75$ (length normalization) are the tunable parameters.
+where $t \in q$ are query terms, $n_t$ is the number of documents containing $t$, $f(t,d)$ is term frequency, $\lvert d \rvert$ is document length, $N$ is corpus size, $\text{avgdl}$ is average document length across the corpus, and $k_1 \approx 1.2$–$2.0$ (term-frequency saturation) and $b \approx 0.75$ (length normalization) are the tunable parameters.
 
 ### BM25 vs vectors
 

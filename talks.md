@@ -19,7 +19,7 @@ description: "Speaking engagements and public presentations by Andrei Radulescu-
             {% include talk-card.html 
                 title="How To Embed an AI Copilot in Your Application"
                 speaker="Andrei Radulescu-Banu"
-                date="Mar 12, 2026"
+                date="Mar 11, 2026"
                 event="AI Camp"
                 event_url="https://www.aicamp.ai/event/eventdetails/W2026031215"
                 logos="/assets/images/ai-camp.png"

@@ -8,6 +8,8 @@ categories: [tech, programming, ai, databases]
 description: "Why MongoDB is ideal for AI applications: document-centric storage, vector search, knowledge bases, and horizontal scaling for DocRouter.AI and SigAgent.AI."
 ---
 
+_This post was co-published by MongoDB at [mongodb.com](https://www.mongodb.com/company/blog/technical/why-i-prefer-mongodb-for-ai-applications)._
+
 I use MongoDB as the primary database for AI-powered products like [DocRouter.AI](https://docrouter.ai) and [SigAgent.AI](https://sigagent.ai). This post explains how it's implemented—migrations, vector search, and knowledge bases—and why I prefer it over alternatives like Postgres for document-centric, JSON-heavy AI workloads. I want to store a very large number of documents (DocRouter) or logs (SigAgent) without spending much time tuning the database for horizontal scaling; MongoDB fits that need well.
 
 ## Brief trade-offs vs Postgres

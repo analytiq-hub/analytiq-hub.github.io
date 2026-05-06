@@ -17,6 +17,18 @@ description: "Speaking engagements and public presentations by Andrei Radulescu-
         <!-- Talks Container -->
         <div class="space-y-8" id="talks-container">
             {% include talk-card.html 
+                title="Embed AI Copilot in Your Application"
+                speaker="Andrei Radulescu-Banu"
+                date="Mar 12, 2026"
+                event="AI Camp"
+                event_url="https://www.aicamp.ai/event/eventdetails/W2026031215"
+                logos="/assets/images/ai-camp.png"
+                image="/assets/images/how_to_embed_an_ai_agent_into_your_application.png"
+                links="https://www.aicamp.ai/event/eventdetails/W2026031215;Event Details|https://www.linkedin.com/feed/update/urn:li:activity:7438324189578588160/;LinkedIn Post|/ai/programming/engineering/product/how-we-built-the-document-agent/;Blog Post"
+                abstract="How we embedded an AI copilot into DocRouter as a tool-calling Document Agent: the agent loop, tool approval UX, context injection, and the backend patterns that make agents reliable in production."
+            %}
+
+            {% include talk-card.html 
                 title="The 'One Codebase, Many Products' Playbook"
                 speaker="Andrei Radulescu-Banu"
                 date="Dec 11, 2025"

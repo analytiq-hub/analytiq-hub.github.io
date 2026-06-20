@@ -106,6 +106,7 @@ doc-router/
 
 A template looks like:
 
+{% raw %}
 ```yaml
 # templates/deployment.yaml
 spec:
@@ -119,6 +120,7 @@ spec:
             requests:
               cpu: {{ .Values.resources.requests.cpu }}
 ```
+{% endraw %}
 
 To install with custom values:
 

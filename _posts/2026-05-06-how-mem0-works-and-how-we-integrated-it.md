@@ -158,7 +158,7 @@ mem0 gives you a clean separation of concerns:
 
 - **Ingestion** (Claude Haiku): extract candidate facts and reconcile them into durable memory.
 - **Storage** (Postgres + pgvector): persist memories as vectors + metadata, organized into collections.
-- **Retrieval** (Titan embeddings): pull the most relevant facts at the start of each turn and inject them into the agent prompt.
+- **Retrieval** (Titan embeddings) and **Reconciliation** (Claude Sonnet): pull the most relevant facts at the start of each turn and inject them into the agent prompt.
 
 The result is an agent that feels consistent over time without relying on ever-growing context windows—and without turning “memory” into an unbounded pile of stale notes.
 

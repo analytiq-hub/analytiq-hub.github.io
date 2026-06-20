@@ -27,25 +27,43 @@ The agent refuses to become a general chatbot. Off-topic queries are declined. E
 
 The system is deliberately layered so each part can evolve independently:
 
-```
-Browser / Mobile
-        │
-        ▼
-FastAPI
-  ├── Input guardrails
-  ├── Message persistence
-  └── Agent runtime
-        │
-        ├── Orchestrator Agent (routes intent)
-        │     └── UpdateChatStateTool (silent; to pass contol to a Subagent)
-        │
-        ├── Learn / Prepare / Reflect Subagents
-        │     ├── KnowledgeBaseTool
-        │     ├── Streaming via SSE
-        │     └── UpdateChatStateTool (to return control to Orchestrator after completing its flow)
-        │
-        └── Background tasks (memory, telemetry, card persistence)
-```
+<div data-excalidraw="/assets/excalidraw/learning-agent.excalidraw" class="excalidraw-container">
+  <div class="loading-placeholder">Loading diagram...</div>
+</div>
+<div style="text-align: center; margin-top: 1rem;">
+  <a href="/excalidraw-edit?file=/assets/excalidraw/learning-agent.excalidraw" target="_blank" style="color: #2563eb; text-decoration: none; font-weight: 500;">
+    📝 Edit in Excalidraw
+  </a>
+</div>
+<p style="text-align: center; margin-top: 0.5rem; font-size: 0.875rem; color: #6b7280;"><strong>Figure 1:</strong> Learning agent architecture.</p>
+
+<style>
+.excalidraw-container {
+  width: 100%;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background: white;
+  display: block;
+  margin: 2rem 0;
+  min-height: 400px;
+}
+
+.excalidraw-container svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+}
+
+.loading-placeholder {
+  padding: 2rem;
+  text-align: center;
+  color: #666;
+}
+</style>
+
+<script type="module" src="/assets/js/excalidraw/render-excalidraw.js"></script>
 
 **Core technology choices**:
 - **Frontend**: React + TypeScript — implements the three journeys and real-time streaming UI.

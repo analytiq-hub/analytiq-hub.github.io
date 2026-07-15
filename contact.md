@@ -19,10 +19,6 @@ description: "Contact Analytiq Hub to discuss how AI can transform your business
                 <!-- Left column: Contact Information -->
                 <div>
                     <h2 class="text-3xl font-semibold text-gray-900 mb-8">Contact Information</h2>
-                    <p class="text-sm text-gray-500 mb-6">
-                        Contracts and payments are with <strong class="font-medium text-gray-700">Analytiq Hub LLC</strong>
-                        (DBA DocRouter AI).
-                    </p>
                     <div class="space-y-6">
                         <!-- Email -->
                         <div class="flex items-center space-x-4">

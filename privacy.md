@@ -9,7 +9,7 @@ description: "Analytiq Hub privacy policy — how we collect, use, and protect y
 
   <header class="mb-12">
     <h1 class="text-4xl font-bold text-gray-900 mb-4">Privacy Policy</h1>
-    <p class="text-gray-500">Effective date: January 1, 2025 &nbsp;·&nbsp; Analytiq Hub, LLC</p>
+    <p class="text-gray-500">Effective date: January 1, 2025 &nbsp;·&nbsp; Analytiq Hub LLC</p>
   </header>
 
   <div class="prose prose-gray max-w-none space-y-10">
@@ -17,9 +17,10 @@ description: "Analytiq Hub privacy policy — how we collect, use, and protect y
     <section>
       <h2 class="text-2xl font-semibold text-gray-900 mb-3">1. Who We Are</h2>
       <p class="text-gray-600 leading-relaxed">
-        Analytiq Hub is operated by Analytiq Hub, LLC, a Massachusetts company. We provide custom AI solutions
-        and expert guidance for biotech, healthtech, and regulated industries at <strong>analytiqhub.com</strong>.
-        Questions about this policy can be sent to
+        This site is operated by <strong>Analytiq Hub LLC</strong>, a Massachusetts company that also does
+        business as <strong>DocRouter AI</strong>. We provide custom AI solutions and expert guidance for
+        biotech, healthtech, and regulated industries at <strong>analytiqhub.com</strong>, and our DocRouter AI
+        product at <strong>docrouter.ai</strong>. Questions about this policy can be sent to
         <a href="mailto:andrei@analytiqhub.com" class="text-blue-600 hover:text-blue-800">andrei@analytiqhub.com</a>.
       </p>
     </section>
@@ -153,7 +154,7 @@ description: "Analytiq Hub privacy policy — how we collect, use, and protect y
       <h2 class="text-2xl font-semibold text-gray-900 mb-3">11. Contact</h2>
       <p class="text-gray-600 leading-relaxed">
         For privacy-related questions or requests:<br>
-        <strong>Analytiq Hub, LLC</strong><br>
+        <strong>Analytiq Hub LLC</strong> (DBA DocRouter AI)<br>
         Email: <a href="mailto:andrei@analytiqhub.com" class="text-blue-600 hover:text-blue-800">andrei@analytiqhub.com</a><br>
         Phone: <a href="tel:6172168509" class="text-blue-600 hover:text-blue-800">617.216.8509</a>
       </p>

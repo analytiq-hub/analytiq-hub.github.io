@@ -13,7 +13,8 @@ description: "Meet Andrei Radulescu-Banu, founder of Analytiq Hub. Expert AI eng
              class="w-full h-full object-cover rounded-full">
       </div>
       <h2 class="text-2xl font-bold text-gray-900 mb-2">Andrei Radulescu-Banu</h2>
-      <p class="text-lg text-gray-600 mb-4">Founder</p>
+      <p class="text-lg text-gray-600 mb-2">Founder</p>
+      <p class="text-sm text-gray-500 mb-4">Analytiq Hub LLC &middot; DBA DocRouter AI</p>
       <!-- Social Links -->
       <div class="flex justify-center md:justify-start space-x-4">
         <a href="https://www.linkedin.com/in/andrei-radulescu-banu" target="_blank" rel="noopener noreferrer" 

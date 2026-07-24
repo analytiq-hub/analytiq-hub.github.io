@@ -17,6 +17,18 @@ description: "Speaking engagements and public presentations by Andrei Radulescu-
         <!-- Talks Container -->
         <div class="space-y-8" id="talks-container">
             {% include talk-card.html 
+                title="How AI Agent Memory Works"
+                speaker="Andrei Radulescu-Banu"
+                date="Jul 23, 2026"
+                event="AI Camp"
+                event_url="https://www.aicamp.ai/event/eventdetails/W2026072314"
+                logos="/assets/images/ai-camp.png"
+                image="/assets/images/mem0-integration-splash.png"
+                links="https://www.aicamp.ai/event/eventdetails/W2026072314;Event Details|https://www.linkedin.com/feed/update/urn:li:activity:7486257884524363777/;LinkedIn Post|/ai/engineering/agents/rag/how-mem0-works-and-how-we-integrated-it/;Blog Post"
+                abstract="How to design AI agent memory and how it behaves in production: extracting memory facts from the incoming prompt, deduplicating and reconciling them with existing entries in AWS Aurora pgvector, injecting prior facts into LLM context, and scalability/optimization strategies for selecting only the most relevant facts. Covered implementation with Mem0 and custom save &amp; retrieve LLM prompts—now a standard capability across ChatGPT, Claude, Grok, and Gemini."
+            %}
+
+            {% include talk-card.html 
                 title="How To Embed an AI Copilot in Your Application"
                 speaker="Andrei Radulescu-Banu"
                 date="Mar 11, 2026"
